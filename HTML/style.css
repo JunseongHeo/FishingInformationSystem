@@ -1,0 +1,73 @@
+*{
+    /* 리스트 항목 점 없애기 */
+    list-style: none;
+    /* 텍스트 밑줄 없애기 */
+    text-decoration: none; 
+    /* 테이블 경계선 합치기 */
+    border-collapse: collapse;
+    /* 간격, 콘텐츠영역(덩치) 기본 0px */
+    margin:0px;
+    padding:0px;
+    /* 글자색은 검은색 */
+    color:#000;
+    /* 글씨체 나눔고딕 https://fonts.google.com/specimen/Nanum+Gothic?subset=korean&query=na#standard-styles */
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.intro_bg {
+    background-image: url("_images/fishing_boat.jpg");
+    height:937px;
+    width:100%;
+    background-size:cover;
+}
+.getHeaderSpace {
+    height:15px;
+}
+.header {
+    display:flex;
+    width: 1400px;
+    height: 86px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+    .searchArea {
+        width: 320px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        margin-top:24px;
+        margin-left:10px;
+    }
+    .searchArea > form > input {
+        border: none;
+        width: 250px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.0);
+        color: #fff;
+        padding-left: 10px;
+    }
+    .searchArea > form > input::placeholder {
+        color: #000;
+    }
+    .searchArea > form > span {
+        width: 50px;
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        width:calc(1280px - 300px);
+        background: rgba(0, 0, 0, 0.0);
+        line-height: 86px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    .nav > li {
+        margin-left:84px;
+    }
+    .nav > li > a {
+        color: #fff;
+    }
