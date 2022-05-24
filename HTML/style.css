@@ -23,6 +23,7 @@
 .getHeaderSpace {
     height:15px;
 }
+
 .header {
     display:flex;
     width: 1400px;
@@ -32,12 +33,13 @@
     border-radius: 5px;
 }
     .searchArea {
+        display:flex;
         width: 320px;
         height: 40px;
         background: rgba(255, 255, 255, 0.5);
         border-radius: 5px;
         margin-top:24px;
-        margin-left:10px;
+        margin-left:20px;
     }
     .searchArea > form > input {
         border: none;
@@ -66,6 +68,7 @@
         font-weight: bold;
     }
     .nav > li {
+        display:flex;
         margin-left:84px;
     }
     .nav > li > a {
