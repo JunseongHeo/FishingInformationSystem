@@ -1,0 +1,19 @@
+KFF 한국 낚시터 연합 
+: 낚시터, 조구업체, 낚시점, 낚시배의 등록현황이 수천개 단위로 있음. DB작성할때 활용하면 좋을듯
+http://www.kff.or.kr/fishing/zoneList.php
+
+낚시누리
+: 낚시터, 낚시산업, 낚시교육정보 등 제공
+https://www.naksinuri.kr/index.do
+
+월척
+: 낚시 커뮤니티
+https://www.wolchuck.co.kr/
+
+바다타임닷컴
+: 전국 물때표, 각종 해양정보 제공
+https://www.badatime.com/
+
+국립해양조사원
+: 위에 링크 바다타임닷컴의 정보출처
+http://www.khoa.go.kr/swtc/main.do
