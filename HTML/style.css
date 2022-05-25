@@ -14,6 +14,14 @@
     font-family: 'Nanum Gothic', sans-serif;
 
 }
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+.contents {
+    font-size: 20px;
+    font-weight: lighter;
+}
 .intro_bg {
     background-image: url("_images/fishing_boat.jpg");
     height:937px;
@@ -84,4 +92,30 @@
 .intro_text > h1,
 .intro_text > h4 {
     color:#fff;
+    position: relative;
+    top:-150px;
+}
+.amount_box {
+    display: flex;
+    width: 1280px;
+    background: red;
+    margin: auto;
+    position: relative;
+    top:-330px;
+}
+.amount_box > li {
+    flex: 1;
+    height: 132px;
+    text-align: center;
+    background: skyblue;
+}
+.amount_box > li > div {
+    height: 66px;
+    margin-top: 33px;
+    text-align: conter;
+    background: green;
+}
+/* css not select 선택자 예외처리 */
+.amount_box > li:not(:last-child) > div {  
+    border-right: 1px solid gray;
 }
