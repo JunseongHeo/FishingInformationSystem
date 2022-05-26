@@ -9,18 +9,9 @@
     margin:0px;
     padding:0px;
     /* 글자색은 검은색 */
-    color:#000;
+    color: #fff;
     /* 글씨체 나눔고딕 https://fonts.google.com/specimen/Nanum+Gothic?subset=korean&query=na#standard-styles */
     font-family: 'Nanum Gothic', sans-serif;
-
-}
-h1 {
-    font-size: 40px;
-    font-weight: 100;
-}
-.contents {
-    font-size: 20px;
-    font-weight: lighter;
 }
 .intro_bg {
     background-image: url("_images/fishing_boat.jpg");
@@ -28,94 +19,26 @@ h1 {
     width:100%;
     background-size:cover;
 }
-.getHeaderSpace {
-    height:15px;
-}
-
-.header {
-    display:flex;
-    width: 1400px;
-    height: 86px;
-    margin: auto;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-    .searchArea {
-        display:flex;
-        width: 320px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        margin-top:24px;
-        margin-left:20px;
-    }
-    .searchArea > form > input {
-        border: none;
-        width: 250px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.0);
-        color: #fff;
-        padding-left: 10px;
-    }
-    .searchArea > form > input::placeholder {
-        color: #000;
-    }
-    .searchArea > form > span {
-        width: 50px;
-        color: #000;
-        cursor: pointer;
-        font-weight: bold;
-    }
-    .nav {
-        display: flex;
-        justify-content: flex-end;
-        width:calc(1280px - 300px);
-        background: rgba(0, 0, 0, 0.0);
-        line-height: 86px;
-        margin-right: 20px;
-        font-weight: bold;
-    }
-    .nav > li {
-        display:flex;
-        margin-left:84px;
-    }
-    .nav > li > a {
-        color: #fff;
-    }
-
-.intro_text {
-    width:100%;
-    /* 상, 우, 하, 좌 시계방향 */
-    margin:231px auto 231px auto; 
-    text-align: center;
-}
-.intro_text > h1,
-.intro_text > h4 {
-    color:#fff;
-    position: relative;
-    top:-150px;
-}
-.amount_box {
+.navbar {
     display: flex;
-    width: 1280px;
-    background: red;
-    margin: auto;
-    position: relative;
-    top:-330px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 12px;
+    font-size: 20px;
+    
 }
-.amount_box > li {
-    flex: 1;
-    height: 132px;
-    text-align: center;
-    background: skyblue;
+.nav_logo > i {
+    color:skyblue;
 }
-.amount_box > li > div {
-    height: 66px;
-    margin-top: 33px;
-    text-align: conter;
-    background: green;
+.nav_menu {
+    display: flex;
+    
 }
-/* css not select 선택자 예외처리 */
-.amount_box > li:not(:last-child) > div {  
-    border-right: 1px solid gray;
+.nav_menu > li {
+    padding: 8px 20px;
+}
+.nav_menu > li:hover{
+    background-color: rgb(230, 169, 39);
+    border-radius: 4px;
 }
