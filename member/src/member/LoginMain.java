@@ -7,6 +7,7 @@ public class LoginMain {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
         LoginProgram program = new LoginProgram();
+        MessageBoard message = new MessageBoard();
         while (true) {
             char select = program.display();
             
@@ -30,11 +31,21 @@ public class LoginMain {
             case '3':
                 program.logout();
                 break;
-            case '5':    
-                System.exit(0);
             case '4':
             	program.searchData();
             	break;
+            case 'a':
+            case 'A':
+            	program.findId();
+            	break;
+            case 'b':
+            case 'B':
+            	program.findPw();
+            	break;
+            case '5':
+            	message.displayBoard();
+            case '9':    
+                System.exit(0);
             default:
                 System.out.println("다시입력하세요.");
                 break;

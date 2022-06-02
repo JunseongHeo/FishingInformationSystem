@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class LoginProgram {
 	LoginProgram[] info = new LoginProgram[100];
-	private String id, password, zone, birth, name, boatTime,boat;
+	private String id, password, zone, birth, name, boatTime, boat, phone;
     
 	int i=0;
     String boatNum = "1";
     static boolean loginFlag = false;
     HashMap<String,String> memberTable = new HashMap<String,String>();
-   public LoginProgram(String newId, String newPwd, String newBir, String newZone, String newName, String boatTime, String newboat) {
+   public LoginProgram(String newId, String newPwd, String newBir, String newZone, String newName, String boatTime, String newboat, String newPhone) {
 		this.id = newId;
 		this.password = newPwd;
 		this.birth = newBir;
@@ -19,6 +19,7 @@ public class LoginProgram {
 		this.name = newName;
 		this.boatTime = boatTime;
 		this.boat = newboat;
+		this.phone = newPhone;
 	}
 public LoginProgram() {
 	
@@ -59,11 +60,18 @@ public void setId(String id) {
     public String getBoat() {
        return boat;
     }
+    public String getPhone() {
+    	return phone;
+    }
+    public void setPhone(String phone) {
+    	this.phone = phone;
+    }
     
     //메뉴 출력 메소드
     public char display() {
     	System.out.println("선택하세요.");
-        System.out.println("1.로그인   2.회원가입   3.로그아웃   4.검색   5.종료");
+        System.out.println("1.로그인   2.회원가입   3.로그아웃   4.검색   5.게시판   9.종료");
+        System.out.println("A.아이디찾기 B.비번찾기");
         System.out.print(">>>");
         return input().charAt(0);
     }
@@ -95,6 +103,8 @@ public void setId(String id) {
             String newName = input();
             System.out.print("생년월일 \n>");
             String newBir = input();
+            System.out.print("핸드폰번호 \n>");
+            String newPhone = input();
             System.out.print("지역 \n>");
             String newZone = input();
             System.out.print("배? \n1.가지고있다. 2.없다\n" );
@@ -103,7 +113,7 @@ public void setId(String id) {
                System.out.print("배 사용가능한 시간을 적어주세요. \n>");
                boatTime = input();
             }
-            info[i++] =new LoginProgram(newId, newPwd, newBir, newZone, newName, boatTime, newBoat); 
+            info[i++] =new LoginProgram(newId, newPwd, newBir, newZone, newName, boatTime, newBoat, newPhone); 
             memberTable.put(newId, newPwd);
             break;
         }
@@ -145,6 +155,7 @@ public void setId(String id) {
     	System.out.println("아이디 : "+id);
         System.out.println("이름 : "+name);
         System.out.println("생년월일 : "+birth);
+        System.out.println("핸드폰 번호 : "+phone);
         System.out.println("지역 : "+zone);
         if(boat.equals(boatNum)) {
            System.out.println("배 이용가능 시간 : "+ boatTime );
@@ -169,7 +180,40 @@ public void setId(String id) {
            }
            return -1;
         }
-       
+        public void findId() {
+        	System.out.println("아이디 찾기");
+        	System.out.print("이름 \n>");
+        	String findName = input();
+        	System.out.print("생년월일 \n>");
+        	String findBir = input();
+        	System.out.print("휴대폰 번호 \n>");
+        	String findPhone = input();
+        	for(int x=0; x<i; x++) {
+        	LoginProgram i =info[x];
+        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
+        		System.out.println("찾은 아이디 : "+i.id);
+        	}else {System.out.println("확인 후 다시 입력해주세요.");}
+        }
+        	
+      }
+        public void findPw() {
+        	System.out.println("비번 찾기");
+        	System.out.print("아이디 \n>");
+        	String findId = input();
+        	System.out.print("이름 \n>");
+        	String findName = input();
+        	System.out.print("생년월일 \n>");
+        	String findBir = input();
+        	System.out.print("휴대폰 번호 \n>");
+        	String findPhone = input();
+        	for(int x=0; x<i; x++) {
+        	LoginProgram i =info[x];
+        	if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
+        		System.out.println("찾은 비밀번호 : "+i.password);
+        	}else {System.out.println("확인 후 다시 입력해주세요.");
+        }
+       } 
+     }
 
  }
    
