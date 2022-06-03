@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MessageBoard extends LoginProgram {
 	Scanner sc = new Scanner(System.in);
 	MessageBoard[] board = new MessageBoard[1000];
-	private String title, substance;
+	static private String title, substance;
 	int messageNum=0;
 	public MessageBoard(String newTitle, String newSub) {
 		this.title = newTitle;
@@ -62,6 +62,7 @@ public class MessageBoard extends LoginProgram {
 	}
 	public void showBoard() {
 		for(int n=0; n<messageNum; n++) {
+			
 			System.out.println("번호 " + n + " 제목 : " + title);
 			}
 		System.out.print("선택 > ");
