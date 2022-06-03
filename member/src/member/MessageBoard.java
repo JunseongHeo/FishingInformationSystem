@@ -49,7 +49,7 @@ public class MessageBoard extends LoginProgram {
 	}
 }
 	public void writ() {
-		
+		while(true) {
 			System.out.print("力格 \n>");
 			String newTitle = input();
 			
@@ -57,12 +57,10 @@ public class MessageBoard extends LoginProgram {
 			String newSub = input();
 			
 			board[messageNum++] = new MessageBoard(newTitle, newSub);
-			
-	
+			break;
+		}
 	}
 	public void showBoard() {
-		title = "啊";
-		substance = "唱";
 		for(int n=0; n<messageNum; n++) {
 			System.out.println("锅龋 " + n + " 力格 : " + title);
 			}
