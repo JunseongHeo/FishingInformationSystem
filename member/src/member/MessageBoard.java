@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class MessageBoard extends LoginProgram {
 	Scanner sc = new Scanner(System.in);
-	MessageBoard[] board = new MessageBoard[100];
-	boolean run = true;
+	MessageBoard[] board = new MessageBoard[1000];
 	private String title, substance;
 	int messageNum=0;
 	public MessageBoard(String newTitle, String newSub) {
@@ -46,7 +45,7 @@ public class MessageBoard extends LoginProgram {
             break;
 			
 		}
-		continue;
+	
 	}
 }
 	public void writ() {
@@ -59,8 +58,11 @@ public class MessageBoard extends LoginProgram {
 			
 			board[messageNum++] = new MessageBoard(newTitle, newSub);
 			
+	
 	}
 	public void showBoard() {
+		title = "가";
+		substance = "나";
 		for(int n=0; n<messageNum; n++) {
 			System.out.println("번호 " + n + " 제목 : " + title);
 			}
