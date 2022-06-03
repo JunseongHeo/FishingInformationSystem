@@ -3,8 +3,8 @@ package member;
 import java.util.Scanner;
 
 public class MessageBoard extends LoginProgram {
-	Scanner a = new Scanner(System.in);
-	MessageBoard[] board = new MessageBoard[1000];
+	Scanner sc = new Scanner(System.in);
+	MessageBoard[] board = new MessageBoard[100];
 	boolean run = true;
 	private String title, substance;
 	int messageNum=0;
@@ -25,53 +25,49 @@ public class MessageBoard extends LoginProgram {
 	}
 	public void setSubstance(String substance) {
 		this.substance = substance;
-	}
-	public void MessagerBoard() {
-	}
-	
+	}	
 	public void displayBoard() {
-		System.out.println("1.글쓰기 2.삭제");
-		int k = a.nextInt();
+		while(true) {
+			System.out.println("1.글쓰기 2.게시글 보기 3.삭제");
+			int k = sc.nextInt();
 		switch(k) {
 		case 1:
-			while(true) {
-				if(loginFlag!=true) {
-					System.out.println("로그인 후 이용하세요.");
-					continue;
-				}
-					System.out.print("제목 : ");
-					String newTitle = input();
-					System.out.print("내용 : ");
-					String newSub = input();
-					board[messageNum++] = new MessageBoard(newTitle, newSub);
-					showBoard();
-					break;
-			}			
-		/*case 2:
-			();
-			break;*/
+			
+			writ();
+			break;				
+		case 2:
+			showBoard();
+			break;
+//		case 3:
+			
+//			break;
+		default:
+            System.out.println("다시입력하세요.");
+            break;
+			
 		}
+		continue;
 	}
-	/*public void writ() {
-		if(loginFlag!=true) {
-			System.out.println("로그인 후 이용하세요.");
-		}else {
-			System.out.print("제목 : ");
-			String newTitle = input();
-			System.out.print("내용 : ");
-			String newSub = input();
-			board[messageNum++] = new MessageBoard(newTitle, newSub);
-		}
+}
+	public void writ() {
 		
-	}*/
+			System.out.print("제목 \n>");
+			String newTitle = input();
+			
+			System.out.print("내용 \n>");
+			String newSub = input();
+			
+			board[messageNum++] = new MessageBoard(newTitle, newSub);
+			
+	}
 	public void showBoard() {
-		for(messageNum=0; messageNum<board.length; messageNum++) {
-			System.out.println("번호"+messageNum+"제목 : "+board[messageNum].title);
-		}
-		System.out.println("선택 > ");
-		int num = a.nextInt();
-			System.out.println("제목 : " + board[num].title);
-			System.out.println("내용 : " + board[num].substance);
+		for(int n=0; n<messageNum; n++) {
+			System.out.println("번호 " + n + " 제목 : " + title);
+			}
+		System.out.print("선택 > ");
+		int num = sc.nextInt();
+			System.out.println("제목 : " + title);
+			System.out.println("내용 : " + substance);
 	}
 	
 }
