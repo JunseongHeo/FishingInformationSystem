@@ -36,7 +36,7 @@
     padding: 20px 12px;
     font-size: 20px;
 }
-.nav_logo > i {
+.nav_logo > a > i {
     color:skyblue;
 }
 .nav_menu {
