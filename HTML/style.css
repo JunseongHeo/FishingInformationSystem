@@ -15,25 +15,32 @@
 }
 .intro_bg {
     background-image: url("_images/fishing_boat.jpg");
-    height:937px;
-    width:100%;
-    background-size:cover;
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+/* .intro_bg::after {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    content:"";
+    opacity: 0.8;
+} */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px 12px;
     font-size: 20px;
-    
 }
 .nav_logo > i {
     color:skyblue;
 }
 .nav_menu {
     display: flex;
-    
 }
 .nav_menu > li {
     padding: 8px 20px;
@@ -41,4 +48,13 @@
 .nav_menu > li:hover{
     background-color: rgb(230, 169, 39);
     border-radius: 4px;
+}
+.intro_text {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 300%;
 }
