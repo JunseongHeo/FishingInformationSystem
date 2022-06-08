@@ -73,4 +73,3 @@ public class MessageBoard extends LoginProgram {
 	
 }
 // 테스트
-// 테스트2
