@@ -190,11 +190,13 @@ public void setId(String id) {
         	String findPhone = input();
         	for(int x=0; x<i; x++) {
         	LoginProgram i =info[x];
-        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
-        		System.out.println("찾은 아이디 : "+i.id);
-        	}else {System.out.println("확인 후 다시 입력해주세요.");}
-        }
-        	
+	        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
+	        		System.out.println("찾은 아이디 : "+i.id);
+	        		break;
+	        	}
+        	}
+        	System.out.println("확인 후 입력해주세요"); // 출력문구 한번만 뜰수 있도록 개선
+        
       }
         public void findPw() {
         	System.out.println("비번 찾기");
