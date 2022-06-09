@@ -92,3 +92,4 @@ public class MessageBoard extends LoginProgram {
 	}
 	
 }
+// Å×½ºÆ®
