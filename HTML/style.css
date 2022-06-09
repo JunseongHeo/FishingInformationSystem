@@ -6,12 +6,13 @@
     /* 테이블 경계선 합치기 */
     border-collapse: collapse;
     /* 간격, 콘텐츠영역(덩치) 기본 0px */
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     /* 글자색은 검은색 */
     color: #fff;
     /* 글씨체 나눔고딕 https://fonts.google.com/specimen/Nanum+Gothic?subset=korean&query=na#standard-styles */
     font-family: 'Nanum Gothic', sans-serif;
+
 }
 .intro_bg {
     background-image: url("_images/fishing_boat.jpg");
@@ -60,4 +61,22 @@
 }
 .nav_login {
     font-size: 15px;
+}
+
+/* 로그인 화면 페이지 */
+html, body {
+    height: 100%;
+    background-color: white;
+}
+.main_login_box {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    justify-content: space-between;
+    height: 90%;
+}
+.main_login_box > div {
+    color : black;
+    text-align: center;
+    border: 2px solid gray ;
 }
