@@ -43,7 +43,34 @@ public class LoginMain {
             	program.findPw();
             	break;
             case '5':
-            	message.displayBoard();
+            	while(true) {
+            		if (!program.loginFlag) {
+                        System.out.println("먼저 사용자 로그인이 필요합니다.");
+                        main(args);
+                        return;
+                    }
+            			
+            			System.out.println("1.글쓰기 2.게시글 보기 3.삭제 4.돌아가기");
+            			int k = input.nextInt();
+            		switch(k) {
+            		case 1:
+            			message.writ();
+            			break;				
+            		case 2:
+            			message.showBoard();
+            			break;
+            		case 3:
+            			message.delBoard();
+            			break;
+            		case 4:
+            			main(args);
+            			break;
+            		default:
+                        System.out.println("다시입력하세요.");
+                        break;	
+            		}
+            	}
+            	
             case '9':    
                 System.exit(0);
             default:
@@ -54,6 +81,6 @@ public class LoginMain {
  
     }
 
-	}
+}
 
 

@@ -2,6 +2,7 @@ package member;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MessageBoard extends LoginProgram {
@@ -27,30 +28,9 @@ public class MessageBoard extends LoginProgram {
 	public void setSubstance(String substance) {
 		this.substance = substance;
 	}	
-	public void displayBoard() {
-		while(true) {
-			System.out.println("1.글쓰기 2.게시글 보기 3.삭제");
-			int k = sc.nextInt();
-		switch(k) {
-		case 1:
-			
-			writ();
-			break;				
-		case 2:
-			showBoard();
-			break;
-		case 3:
-			delBoard();
-		break;
-		default:
-            System.out.println("다시입력하세요.");
-            break;
-			
-		}
 	
-	}
-}
 	public void writ() {
+		
 			System.out.print("제목 \n>");
 			String newTitle = input();
 			
@@ -66,30 +46,60 @@ public class MessageBoard extends LoginProgram {
 		for(int n=0; n<st.size(); n++) {			
 			System.out.println("번호 " + n + " 제목 : " + st.get(n).title);
 			}
-		System.out.println("돌아가기 = 00");
+		while(true) {
+			try {
+		System.out.println("1.게시물 선택  2.돌아가기");
 		System.out.print("선택 >");
-		int num = sc.nextInt();
-		if(num != 00) {
-			System.out.println("제목 : " + st.get(num).title);
-			System.out.println("내용 : " + st.get(num).substance);
-		
+		int ba = sc.nextInt();
+			switch(ba) {
+				case 1:
+					System.out.print("보고싶은 번호 선택 \n>");
+					int num = sc.nextInt();
+					if(num != 'b') {
+						System.out.println("제목 : " + st.get(num).title);
+						System.out.println("내용 : " + st.get(num).substance);
+					}
+				case 2:
+					return;
+			} break;
+		} catch (InputMismatchException e) {
+			if(e instanceof InputMismatchException)
+				sc=new Scanner(System.in);
+			System.out.println("숫자만 입력 가능합니다 \n");
+		} catch (IndexOutOfBoundsException e) {
+			if(e instanceof IndexOutOfBoundsException)
+				sc=new Scanner(System.in);
+			System.out.println("[존재하지 않는 게시물 번호입니다.]\n");
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
-	public void delBoard() {
-		System.out.print("삭제 번호 입력 \n>");
-		int m = sc.nextInt();
-		System.out.println("정말 삭제 하시겠습니까?");
-		System.out.println("1.삭제 2.돌아가기");
-		System.out.print(">");
-		int del = sc.nextInt();
-		if(del == 1) {
-		MessageBoard ab = st.remove(m); 
-		return;
-		}else if(del ==2) {
-		return ;
-		}
-	}
-	
 }
-// 테스트
+
+	public void delBoard() {
+			System.out.print("삭제 번호 입력 \n>");
+			try {
+			int m = sc.nextInt();
+			System.out.println("정말 삭제 하시겠습니까?");
+			System.out.println("1.삭제 2.돌아가기");
+			System.out.print(">");
+			int del = sc.nextInt();
+			if(del == 1) {
+			MessageBoard ab = st.remove(m); 
+			return;
+			}else if(del ==2) {
+			return ;
+			}
+		} catch (IndexOutOfBoundsException e) {
+			if(e instanceof IndexOutOfBoundsException)
+				sc = new Scanner(System.in);
+				System.out.println("[존재하지 않는 게시물 번호입니다.]\n");
+		} catch (InputMismatchException e) {
+			if(e instanceof InputMismatchException)
+				sc = new Scanner(System.in);
+				System.out.println("숫자만 입력 가능합니다 \n");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
