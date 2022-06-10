@@ -81,12 +81,28 @@ html, body {
 .main_center_screen {
     display: flex;
     flex-direction:column;
+    justify-content: space-between;
     align-items: center;
     background-color: pink;
     height: 500px;
     width: 450px;
     border-radius: 10px;
+    margin: 30px;
 }
+.main_center_screen > input, button {
+    padding: 10px;
+    margin: 20px;
+}
+.account {
+    color:black;
+    width: 80%;
+}
+/* #button_login, .account {
+    width: 80%;
+} */
+/* .account_management {
+    display: flex;
+} */
 .left_bar {
     background-color: pink;
     height: 100%;
