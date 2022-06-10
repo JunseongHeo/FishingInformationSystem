@@ -20,7 +20,7 @@ html, body {
 .wrap {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color: white;
     height: 100%;
 }
 .intro_bg {
@@ -56,7 +56,7 @@ html, body {
     padding: 8px 20px;
 }
 .nav_menu > li:hover{
-    background-color: rgb(230, 169, 39);
+    background-color: rgb(50, 191, 166);
     border-radius: 4px;
 }
 .intro_text {
@@ -71,42 +71,35 @@ html, body {
 .nav_login {
     font-size: 15px;
 }
+/* 로그인 페이지 css */
 .main_section {
     display: flex;
-    justify-content: space-between;
-    flex:1;
-    align-items: center;
-    
+    justify-content: center;
 }
 .main_center_screen {
+    position: absolute;
+    margin-top: 30px;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
-    height: 500px;
+    background-color: rgb(80, 210, 249, 0.5);
+    flex-grow: 1;
+    height: auto;
     width: 450px;
     border-radius: 10px;
-    margin: 30px;
+    /* 마진 및 페딩 수치 적용순서는 top부터 시계방향(top-right-buttom-left) */
+    padding: 30px 0 20px 0; 
 }
 .main_center_screen > input, button {
     padding: 10px;
     margin: 20px;
+    font-size: 15px;
 }
 .account {
     color:black;
     width: 80%;
 }
-/* #button_login, .account {
-    width: 80%;
-} */
-/* .account_management {
-    display: flex;
-} */
-.left_bar {
-    background-color: pink;
-    height: 100%;
+.box_header {
+    color:black;
 }
-
-
-
