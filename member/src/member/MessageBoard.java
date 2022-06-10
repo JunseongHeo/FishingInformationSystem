@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import javax.swing.text.DefaultTextUI;
+
 public class MessageBoard extends LoginProgram {
 	Scanner sc = new Scanner(System.in);
 	ArrayList<MessageBoard> st = new ArrayList<MessageBoard>();
@@ -61,6 +63,9 @@ public class MessageBoard extends LoginProgram {
 					}
 				case 2:
 					return;
+				default :
+					System.out.println("잘못 입력하셨습니다. 다시입력하세요");
+					break;
 			} break;
 		} catch (InputMismatchException e) {
 			if(e instanceof InputMismatchException)
@@ -80,9 +85,14 @@ public class MessageBoard extends LoginProgram {
 			System.out.print("삭제 번호 입력 \n>");
 			try {
 			int m = sc.nextInt();
+			if(m <= st.size()-1) {
 			System.out.println("정말 삭제 하시겠습니까?");
 			System.out.println("1.삭제 2.돌아가기");
 			System.out.print(">");
+			}else {
+				System.out.println("[존재하지 않는 게시물 번호입니다.]\n");
+				return;
+			}
 			int del = sc.nextInt();
 			if(del == 1) {
 			MessageBoard ab = st.remove(m); 

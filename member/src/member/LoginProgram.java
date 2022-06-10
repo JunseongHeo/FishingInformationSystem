@@ -67,7 +67,7 @@ public void setId(String id) {
     	this.phone = phone;
     }
     
-    //메뉴 출력 메소드
+    
     public char display() {
     	System.out.println("선택하세요.");
         System.out.println("1.로그인   2.회원가입   3.로그아웃   4.검색   5.게시판   9.종료");
@@ -77,13 +77,13 @@ public void setId(String id) {
     }
     
     
-    //입력 메소드
+    
     public String input() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
     
-    //회원가입 메소드
+    
     public void Join() {
         if (loginFlag) {
             System.out.println("자동로그아웃하고 새로운 회원가입을 시작합니다.");
@@ -120,7 +120,7 @@ public void setId(String id) {
         
         System.out.println("회원가입 완료");
     }
-    //로그인 메소드
+   
     public void loginVaild() {
         if (loginFlag) {
             System.out.println("이미 로그인되어 있는 상태입니다.");
@@ -142,7 +142,7 @@ public void setId(String id) {
         }
     }
     
-    //로그아웃 메소드
+    
     public void logout() {
         if (!loginFlag) {
             System.out.println("먼저 사용자 로그인이 필요합니다.");
@@ -210,7 +210,8 @@ public void setId(String id) {
         	LoginProgram i =info[x];
         	if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
         		System.out.println("찾은 비밀번호 : "+i.password);
-        	}else {System.out.println("확인 후 다시 입력해주세요.");
+        	}else {
+        		System.out.println("확인 후 다시 입력해주세요.");
         }
        } 
      }
