@@ -12,7 +12,7 @@
 <body>
     <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
     <div class ="wrap"> <!--전체-->
-            <nav class="navbar"> <!--네비게이션바-->
+            <nav class="navbar"> <!--네비게이션바. header-->
                 <div class="nav_logo"> <!--로고블럭-->
                     <a href="../index.html" title="메인화면으로 이동">
                     <i class="fa-solid fa-fish"></i>
@@ -33,14 +33,24 @@
                     </a>
                 </div>
             </nav> <!--네비게이션바 끝--> 
-            <div class="main_login_box"> 
-                <div>
-                    로그인 화면
-                </div>
-                <div>
-                    footer
-                </div>
-            </div>
+            <section class="main_section"> <!--가운데 세션-->
+                <aside class="left_bar">로그인 화면</aside>
+                <main class="main_center_screen">
+                    <h1>로그인</h1>
+                    <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account">
+                    <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account">
+                    <button id="button_login" class="acoount">로그인</button>
+                    <button id="button_membership_join" class="account">회원가입</button>
+
+                </main>
+                <aside>오른쪽</aside>
+            </section>
+            <!--풋터-->
+            <!-- <footer> 
+                <div>안녕하세요</div>
+                <div>안녕하세요2</div>
+            </footer>            -->
+
     </div>
 </body>
 </html>
