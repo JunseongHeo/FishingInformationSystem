@@ -1,10 +1,13 @@
 package member;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MessageBoard extends LoginProgram {
 	Scanner sc = new Scanner(System.in);
-	MessageBoard[] board = new MessageBoard[1000];
+	ArrayList<MessageBoard> st = new ArrayList<MessageBoard>();
 	private String title, substance;
 	int messageNum=0;
 	public MessageBoard(String newTitle, String newSub) {
@@ -25,43 +28,21 @@ public class MessageBoard extends LoginProgram {
 	public void setSubstance(String substance) {
 		this.substance = substance;
 	}	
-	public void displayBoard() {
-		while(true) {
-			System.out.println("1.글쓰기 2.게시글 보기 3.삭제");
-			int k = sc.nextInt();
-		switch(k) {
-		case 1:
-			
-			writ();
-			break;				
-		case 2:
-			showBoard();
-			break;
-//		case 3:
-			
-//			break;
-		default:
-            System.out.println("다시입력하세요.");
-            break;
-			
-		}
 	
-	}
-}
 	public void writ() {
-		while(true) {
+		
 			System.out.print("제목 \n>");
 			String newTitle = input();
 			
 			System.out.print("내용 \n>");
 			String newSub = input();
 			
-			board[messageNum++] = new MessageBoard(newTitle, newSub);
-			break;
-		}
+			st.add(messageNum++, new MessageBoard(newTitle, newSub));
+			
+			
+		
 	}
 	public void showBoard() {
-<<<<<<< HEAD
 		while(true) {
 			try {
 		System.out.println("1.게시물 선택  2.돌아가기");
@@ -124,17 +105,5 @@ public class MessageBoard extends LoginProgram {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-=======
-		for(int n=0; n<messageNum; n++) {
-			System.out.println("번호 " + n + " 제목 : " + board[n].title);
-			}
-		System.out.print("선택 > ");
-		int num = sc.nextInt();
-			System.out.println("제목 : " + board[num].title);
-			System.out.println("내용 : " + board[num].substance);
->>>>>>> parent of 653c658 (123)
 	}
-	
 }
-// 테스트
-// 테스트2

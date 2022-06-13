@@ -9,8 +9,9 @@ public class LoginMain {
         LoginProgram program = new LoginProgram();
         MessageBoard message = new MessageBoard();
         while (true) {
+        	//예외처리 추가(o)
+        	try {
             char select = program.display();
-            
             switch (select) {
             case '1':
                 program.loginVaild();
@@ -43,7 +44,6 @@ public class LoginMain {
             	program.findPw();
             	break;
             case '5':
-<<<<<<< HEAD
             	while(true) {
             		if (!program.loginFlag) {
                         System.out.println("[먼저 사용자 로그인이 필요합니다]\n");
@@ -88,19 +88,20 @@ public class LoginMain {
 >>>>>>> parent of 7070b75 (000)
             	}
             	
-=======
-            	message.displayBoard();
->>>>>>> parent of 653c658 (123)
             case '9':    
                 System.exit(0);
             default:
-                System.out.println("다시입력하세요.");
+                System.out.println("[다시입력하세요]\n");
                 break;
             }
+	       } catch (StringIndexOutOfBoundsException e) {
+	        	if(e instanceof StringIndexOutOfBoundsException)
+	        		input = new Scanner(System.in);
+	        			System.out.println("[선택 후 엔터를 눌러주세요]\n");
+	       } catch (Exception e) {
+	        	e.printStackTrace();
+	       }
+       
         }
- 
-    }
-
 	}
-
-
+}
