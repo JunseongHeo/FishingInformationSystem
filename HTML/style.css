@@ -9,7 +9,7 @@
     margin:0;
     padding:0;
     /* 글자색은 검은색 */
-    color: #fff;
+    color: black;
     /* 글씨체 나눔고딕 https://fonts.google.com/specimen/Nanum+Gothic?subset=korean&query=na#standard-styles */
     font-family: 'Nanum Gothic', sans-serif;
 }
@@ -46,14 +46,27 @@ html, body {
     padding: 20px 12px;
     font-size: 20px;
 }
+.nav_logo > a {
+    color: white;
+}
 .nav_logo > a > i {
     color:skyblue;
 }
 .nav_menu {
     display: flex;
+    margin-left: -120px;
 }
 .nav_menu > li {
     padding: 8px 20px;
+}
+.nav_menu > li > a {
+    color: white;
+}
+.nav_login > a {
+    color: white;
+}
+.nav_login > a > i {
+    color: white;
 }
 .nav_menu > li:hover{
     background-color: rgb(50, 191, 166);
@@ -71,6 +84,7 @@ html, body {
 .nav_login {
     font-size: 15px;
 }
+
 /* 로그인 페이지 css */
 .main_section {
     display: flex;
@@ -97,9 +111,55 @@ html, body {
     font-size: 15px;
 }
 .account {
-    color:black;
     width: 80%;
 }
-.box_header {
-    color:black;
+
+/* 게시판 페이지 css */
+.board_main > h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.board_main {
+    width: 1000px;
+	margin:auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+}
+table td,th {
+    border-bottom:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background: rgb(80, 210, 249, 0.5);
+}
+#button_writing_create {
+    text-align: right;
+    padding: 10px 0 10px 0;
+}
+#button_writing_create > input {
+    height: 25px;
+    width: 50px;
+}
+.board_title, .board_content {
+    width: 100%;
+}
+.borad_writing_create_button {
+    display: flex;
+}
+.borad_writing_create_button > input {
+    flex:1;
+    height: 30px;
+}
+.board_writing_read_content {
+    min-height: 350px;
+    text-align: left;
+}
+#read_title {
+    text-align: left;
 }
