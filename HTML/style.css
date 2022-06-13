@@ -116,8 +116,8 @@ html, body {
 
 /* 게시판 페이지 css */
 .board_main > h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-align: center;
 }
 .board_main {
