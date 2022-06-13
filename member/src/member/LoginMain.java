@@ -1,5 +1,6 @@
 package member;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class LoginMain {
@@ -50,7 +51,7 @@ public class LoginMain {
                         main(args);
                         return;
                     }
-            			
+            		try {	
             			System.out.println("1.글쓰기 2.게시글 보기 3.삭제 4.돌아가기");
             			int k = input.nextInt();
             		switch(k) {
@@ -58,15 +59,13 @@ public class LoginMain {
             			message.writ();
             			break;				
             		case 2:
+            			if(message.st.size()!=0) {
             			message.showBoard();
             			break;
-<<<<<<< HEAD
             			}else {
             				System.out.println("[게시물이 없습니다]\n");
             				break;
             			}
-=======
->>>>>>> parent of 7070b75 (000)
             		case 3:
             			message.delBoard();
             			break;
@@ -77,15 +76,12 @@ public class LoginMain {
                         System.out.println("[다시입력하세요]\n");
                         break;	
             		}
-<<<<<<< HEAD
             		}catch(InputMismatchException e) {
             			input = new Scanner(System.in);
         				System.out.println("[숫자만 입력 가능합니다] \n");
             		}catch (Exception e) {
             			e.printStackTrace();
             		}
-=======
->>>>>>> parent of 7070b75 (000)
             	}
             	
             case '9':    
