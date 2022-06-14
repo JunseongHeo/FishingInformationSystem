@@ -39,8 +39,7 @@ public class MessageBoard extends LoginProgram {
 			System.out.print("³»¿ë \n>");
 			String newSub = input();
 			
-			st.add(messageNum++, new MessageBoard(newTitle, newSub));
-			
+			st.add(messageNum++, new MessageBoard(newTitle, newSub));		
 	}
 	
 	public void showBoard() {

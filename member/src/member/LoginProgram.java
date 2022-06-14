@@ -138,7 +138,7 @@ public void setId(String id) {
                 loginFlag = true;
             }
         } else {
-            System.out.println("[존재하지 않는 아이디 입니다]");
+            System.out.println("[존재하지 않는 아이디 입니다]\n");
         }
     }
     
@@ -191,11 +191,12 @@ public void setId(String id) {
         	for(int x=0; x<i; x++) {
         	LoginProgram i =info[x];
 	        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
-	        		System.out.println("찾은 아이디 : "+i.id);
+	        		System.out.println("[찾은 아이디 : "+i.id+"]");
 	        		break;
+	        	}else {
+	            	System.out.println("[확인 후 입력해주세요]/n");
 	        	}
         	}
-        	System.out.println("[확인 후 입력해주세요]");
       }
         
         public void findPw() {
@@ -211,10 +212,10 @@ public void setId(String id) {
         	for(int x=0; x<i; x++) {
         	LoginProgram i =info[x];
         	if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
-        		System.out.println("비밀번호는 "+i.password + "입니다");
+        		System.out.println("[비밀번호는 "+i.password + "입니다]");
         	}else {
-        		System.out.println("[확인 후 다시 입력해주세요]");
-        }
-       } 
-     }
+        		System.out.println("[확인 후 다시 입력해주세요]/n");
+        	}
+        } 
+    }
  }

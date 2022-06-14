@@ -52,7 +52,7 @@ public class LoginMain {
                         return;
                     }
             		try {	
-            			System.out.println("1.글쓰기 2.게시글 보기 3.삭제 4.돌아가기");
+            			System.out.println("1.글쓰기  2.게시글 보기  3.삭제  4.돌아가기");
             			int k = input.nextInt();
             		switch(k) {
             		case 1:
@@ -63,7 +63,7 @@ public class LoginMain {
             			message.showBoard();
             			break;
             			}else {
-            				System.out.println("[게시물이 없습니다]\n");
+            				System.out.println("/n[게시물이 없습니다]\n");
             				break;
             			}
             		case 3:
@@ -85,15 +85,16 @@ public class LoginMain {
             	}
             	
             case '9':    
+                System.out.println(">>> 프로그램이 종료되었습니다.");
                 System.exit(0);
             default:
-                System.out.println("[다시입력하세요]\n");
+                System.out.println("[다시입력하세요]");
                 break;
             }
 	       } catch (StringIndexOutOfBoundsException e) {
 	        	if(e instanceof StringIndexOutOfBoundsException)
 	        		input = new Scanner(System.in);
-	        			System.out.println("[선택 후 엔터를 눌러주세요]\n");
+	        			System.out.println("[선택 후 엔터를 눌러주세요]");
 	       } catch (Exception e) {
 	        	e.printStackTrace();
 	       }
