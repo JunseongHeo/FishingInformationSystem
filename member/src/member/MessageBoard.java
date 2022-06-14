@@ -41,10 +41,12 @@ public class MessageBoard extends LoginProgram {
 			
 			st.add(messageNum++, new MessageBoard(newTitle, newSub));
 			
-			
-		
 	}
+	
 	public void showBoard() {
+		for(int n = 0; n<messageNum; n++) {
+			System.out.println(n + "제목: " + st.get(n).title);
+		}
 		while(true) {
 			try {
 		System.out.println("1.게시물 선택  2.돌아가기");
