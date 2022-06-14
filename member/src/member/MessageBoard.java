@@ -39,13 +39,12 @@ public class MessageBoard extends LoginProgram {
 			System.out.print("내용 \n>");
 			String newSub = input();
 			
-			st.add(messageNum++, new MessageBoard(newTitle, newSub));								
+			st.add(messageNum++, new MessageBoard(newTitle, newSub));
+			
+			
+		
 	}
-	
 	public void showBoard() {
-		for(int n=0; n<st.size(); n++) {
-			System.out.println("번호: " + n + "내용: " + st.get(n).title);
-		}
 		while(true) {
 			try {
 		System.out.println("1.게시물 선택  2.돌아가기");
@@ -76,11 +75,10 @@ public class MessageBoard extends LoginProgram {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
 }
-	
+	}
+
 	public void delBoard() {
-			
 			System.out.print("삭제 번호 입력 \n>");
 			try {
 			int m = sc.nextInt();
@@ -92,7 +90,6 @@ public class MessageBoard extends LoginProgram {
 				System.out.println("[존재하지 않는 게시물 번호입니다.]\n");
 				return;
 			}
-			
 			int del = sc.nextInt();
 			if(del == 1) {
 			MessageBoard ab = st.remove(m); 
@@ -101,7 +98,6 @@ public class MessageBoard extends LoginProgram {
 			}else if(del ==2) {
 			return ;
 			}
-			
 		} catch (IndexOutOfBoundsException e) {
 			if(e instanceof IndexOutOfBoundsException)
 				sc = new Scanner(System.in);
