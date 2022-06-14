@@ -78,7 +78,6 @@ public class MessageBoard extends LoginProgram {
 		}
 	}
 }
-
 	
 	public void delBoard() {
 			
