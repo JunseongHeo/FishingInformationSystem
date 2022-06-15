@@ -46,7 +46,7 @@ public class LoginMain {
 	            			if (!program.loginFlag) {
 		                        System.out.println("[먼저 사용자 로그인이 필요합니다]\n");
 		                        main(args);
-		                        return;
+//		                        return;
 	            			}
 	            		try {	
 	            			System.out.println("1.글쓰기  2.게시글 보기  3.삭제  4.돌아가기");
