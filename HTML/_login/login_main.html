@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
+    <title>낚시 정보 시스템 - 로그인</title>
+</head>
+<body>
+    <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
+    <div class ="wrap"> <!--전체-->
+            <nav class="navbar"> <!--네비게이션바. header-->
+                <div class="nav_logo"> <!--로고블럭-->
+                    <a href="../index.html" title="메인화면으로 이동">
+                    <i class="fa-solid fa-fish"></i>
+                    낚시 정보 시스템
+                    </a>
+                </div>
+                <ul class="nav_menu"> <!--메뉴블럭-->
+                    <li><a href="http://www.kff.or.kr/fishing/zoneList.php" target='_blank'>낚시터 찾기</a></li>
+                    <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
+                    <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
+                    <li><a href="../_messageboard/board_main.html">커뮤니티</a></li>
+                </ul>
+                <div class="nav_login">
+                    <a href="#" title="로그인">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        로그인
+                    </a>
+                </div>
+            </nav> <!--네비게이션바 끝--> 
+            <section class="main_section"> <!--가운데 세션-->
+                <main class="main_center_screen">
+                    <h1 class="box_header">로그인</h1>
+                    <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account">
+                    <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account">
+                    <button id="button_login" id="button_login" class="account">로그인</button>
+                    <button id="button_membership_id_recover" class="account" onclick=" location.href='./login_id_recover.html' ">아이디 찾기</button>
+                    <button id="button_membership_password_recover" class="account" onclick=" location.href='./login_password_recover.html' ">비밀번호 찾기</button>
+                    <button id="button_membership_join" class="account" onclick=" location.href='./login_membership_join.html' ">회원가입</button>
+                </main>
+            </section>
+    </div>
+</body>
+</html>
