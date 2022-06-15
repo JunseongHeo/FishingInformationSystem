@@ -21,10 +21,10 @@ public class LoginProgram {
 		this.boat = newboat;
 		this.phone = newPhone;
 	}
-public LoginProgram() {
+   public LoginProgram() {
 	
-}
-public void setId(String id) {
+    }
+   public void setId(String id) {
         this.id = id;
     }
     public String getId() {
@@ -189,15 +189,14 @@ public void setId(String id) {
         	System.out.print("휴대폰 번호 \n>");
         	String findPhone = input();
         	for(int x=0; x<i; x++) {
-        	LoginProgram i =info[x];
+        		LoginProgram i =info[x];
 	        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
-	        		System.out.println("[찾은 아이디 : "+i.id+"]");
-	        		break;
+	        		System.out.println("[찾은 아이디 : "+i.id+"]");		
 	        	}else {
-	            	System.out.println("[확인 후 입력해주세요]/n");
+	            	System.out.println("[확인 후 입력해주세요]");
 	        	}
         	}
-      }
+        }
         
         public void findPw() {
         	System.out.println("[비밀번호 찾기]");
@@ -210,12 +209,12 @@ public void setId(String id) {
         	System.out.print("휴대폰 번호 \n>");
         	String findPhone = input();
         	for(int x=0; x<i; x++) {
-        	LoginProgram i =info[x];
-        	if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
-        		System.out.println("[비밀번호는 "+i.password + "입니다]");
-        	}else {
-        		System.out.println("[확인 후 다시 입력해주세요]/n");
-        	}
-        } 
-    }
+        		LoginProgram i =info[x];
+        		if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
+        			System.out.println("[비밀번호는 "+i.password + "입니다]");
+        		}else {
+        			System.out.println("[확인 후 다시 입력해주세요]");
+        		}
+        	} 
+        }
  }
