@@ -21,7 +21,7 @@ public class LoginMain {
 		                System.out.print("ID :");
 		                String myId = input.nextLine();
 		                program.setId(myId);
-		                System.out.print("PW : ");
+		                System.out.print("PW :");
 		                String myPw = input.nextLine();
 		                program.setPassword(myPw);
 		                program.isMemberCheck(program.getId(), program.getPassword());
@@ -34,7 +34,7 @@ public class LoginMain {
 	            		program.logout();
 	            		break;
 	            	case '4': // <정보검색>
-	            		program.searchData();
+	            		program.showMemberInfo();
 	            		break;
 	            	case 'a': case 'A': // <ID찾기>
 	            		program.findId();
@@ -57,13 +57,8 @@ public class LoginMain {
 			            			message.writ();
 			            			break;				
 	            				case 2: // <게시글 보기>
-			            			if(message.st.size()!=0) {
 			            			message.showBoard();
 			            			break;
-			            			}else {
-			            				System.out.println("[게시물이 없습니다]");
-			            				break;
-			            			}
 	            				case 3: // <삭제>
 			            			message.delBoard();
 			            			break;

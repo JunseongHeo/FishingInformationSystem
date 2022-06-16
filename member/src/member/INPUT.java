@@ -7,4 +7,8 @@ class INPUT {
 		Scanner sc = new Scanner(System.in);
 		return sc.nextLine();
 	}
+	static public int inputInt() {
+		Scanner scInt = new Scanner(System.in);
+		return scInt.nextInt();
+	}
 }
