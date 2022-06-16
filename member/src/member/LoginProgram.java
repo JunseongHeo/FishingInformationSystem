@@ -73,15 +73,9 @@ public class LoginProgram {
         System.out.println("1.로그인   2.회원가입   3.로그아웃   4.검색   5.게시판   9.종료");
         System.out.println("A.아이디 찾기 B.비밀번호 찾기");
         System.out.print(">>");
-        return input().charAt(0);
+        return INPUT.input().charAt(0);
+
     }
-    
-        
-    public String input() {
-        Scanner sc = new Scanner(System.in);
-        return sc.nextLine();
-    }
-    
     
     public void Join() {
         if (loginFlag) {
@@ -91,26 +85,26 @@ public class LoginProgram {
         while(true) {
            
             System.out.print("[회원가입] \nid \n>");
-            String newId = input();
+            String newId = INPUT.input();
             if(memberTable.containsKey(newId)) {
                 System.out.println("이미 존재하는 아이디 입니다.");
                 continue;
             }
             System.out.print("pw \n>");
-            String newPwd = input();
+            String newPwd = INPUT.input();
             System.out.print("이름 \n>");
-            String newName = input();
+            String newName = INPUT.input();
             System.out.print("생년월일 \n>");
-            String newBir = input();
+            String newBir = INPUT.input();
             System.out.print("핸드폰번호 \n>");
-            String newPhone = input();
+            String newPhone = INPUT.input();
             System.out.print("지역 \n>");
-            String newZone = input();
+            String newZone = INPUT.input();
             System.out.print("배 소유여부 \n1.가지고있다. 2.없다\n" );
-            String newBoat = input();
+            String newBoat = INPUT.input();
             if(newBoat.equals(boatNum)) {
                System.out.print("배를 사용가능한 시간을 적어주세요. \n>");
-               boatTime = input();
+               boatTime = INPUT.input();
             }
             info[i++] =new LoginProgram(newId, newPwd, newBir, newZone, newName, boatTime, newBoat, newPhone); 
             memberTable.put(newId, newPwd);
@@ -162,7 +156,7 @@ public class LoginProgram {
      }
      public void searchData() {
         System.out.print("아이디를 입력하세요 \n> ");
-        String id = input();
+        String id = INPUT.input();
         int dataIdx = search(id);
         if(dataIdx<0) {
            System.out.println("[해당 아이디는 존재하지 않습니다]");
@@ -182,11 +176,11 @@ public class LoginProgram {
         public void findId() {
         	System.out.println("[아이디 찾기]");
         	System.out.print("이름 \n>");
-        	String findName = input();
+        	String findName = INPUT.input();
         	System.out.print("생년월일 \n>");
-        	String findBir = input();
+        	String findBir = INPUT.input();
         	System.out.print("휴대폰 번호 \n>");
-        	String findPhone = input();
+        	String findPhone = INPUT.input();
         	for(int x=0; x<i; x++) {
         		LoginProgram i =info[x];
 	        	if(i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
@@ -200,13 +194,13 @@ public class LoginProgram {
         public void findPw() {
         	System.out.println("[비밀번호 찾기]");
         	System.out.print("아이디 \n>");
-        	String findId = input();
+        	String findId = INPUT.input();
         	System.out.print("이름 \n>");
-        	String findName = input();
+        	String findName = INPUT.input();
         	System.out.print("생년월일 \n>");
-        	String findBir = input();
+        	String findBir = INPUT.input();
         	System.out.print("휴대폰 번호 \n>");
-        	String findPhone = input();
+        	String findPhone = INPUT.input();
         	for(int x=0; x<i; x++) {
         		LoginProgram i =info[x];
         		if(i.id.compareTo(findId)==0 && i.name.compareTo(findName)==0 && i.birth.compareTo(findBir)==0 && i.phone.compareTo(findPhone)==0) {
