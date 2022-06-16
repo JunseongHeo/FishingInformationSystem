@@ -28,6 +28,7 @@ public class LoginMain {
 		                break;
 	            	case '2': // <회원가입>
 	            		program.Join();
+	            		
 	            		break;
 	            	case '3': // <로그아웃>
 	            		program.logout();
@@ -89,7 +90,6 @@ public class LoginMain {
 		                break;
 		            	}
 			       } catch (StringIndexOutOfBoundsException e) {
-			        	if(e instanceof StringIndexOutOfBoundsException)
 			        		input = new Scanner(System.in);
 			        			System.out.println("[선택 후 엔터를 눌러주세요]");
 			       } catch (Exception e) {
