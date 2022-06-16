@@ -76,8 +76,7 @@ public class LoginProgram {
         return input().charAt(0);
     }
     
-    
-    
+        
     public String input() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();

@@ -5,6 +5,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MessageBoard extends LoginProgram {
+	
+	
 	Scanner sc = new Scanner(System.in);
 	ArrayList<MessageBoard> st = new ArrayList<MessageBoard>();
 	private String title, substance;
