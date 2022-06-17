@@ -79,7 +79,6 @@ public class MessageBoard extends LoginProgram {
 			}
 			
 	}
-	
 	public void showBoard() {
 		while(true) {
 			try {
@@ -111,11 +110,11 @@ public class MessageBoard extends LoginProgram {
 			conn = DriverManager.getConnection(url, user, pwd);
 			
 			String sql = "delete from mboard where col_num=?";
+			ppst = conn.prepareStatement(sql);
 			
 			System.out.print("삭제할 게시글 번호 입력 >");
-			int st0 = INPUT.inputInt();
-			ppst.setInt(1, st0);
-			ppst = conn.prepareStatement(sql);
+			String string = INPUT.input();
+			ppst.setString(1, string);
 			resultCnt = ppst.executeUpdate();
 			
 			System.out.println("삭제가 완료되었습니다.");
@@ -125,6 +124,5 @@ public class MessageBoard extends LoginProgram {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
