@@ -81,6 +81,9 @@ html, body {
     text-align: center;
     line-height: 300%;
 }
+#main_text {
+    color: rgb(255, 255, 255);    
+}
 .nav_login {
     font-size: 15px;
 }

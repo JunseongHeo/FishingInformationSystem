@@ -17,10 +17,9 @@ public class LoginProgram {
 	ResultSet rs = null; 
 	
 	LoginProgram[] info = new LoginProgram[100];
-	static private String id, password, zone, birth, name, boatTime, boat, phone;
+	static private String id, password, zone, birth, name;
     
 	int i=0;
-    String boatNum = "1";
     static boolean loginFlag = false;
     HashMap<String,String> memberTable = new HashMap<String,String>();
     public LoginProgram(String newId, String newPwd,  String newBir, String newZone, String newName) {
