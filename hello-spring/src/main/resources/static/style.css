@@ -1,0 +1,168 @@
+*{
+    /* 리스트 항목 점 없애기 */
+    list-style: none;
+    /* 텍스트 밑줄 없애기 */
+    text-decoration: none;
+    /* 테이블 경계선 합치기 */
+    border-collapse: collapse;
+    /* 간격, 콘텐츠영역(덩치) 기본 0px */
+    margin:0;
+    padding:0;
+    /* 글자색은 검은색 */
+    color: black;
+    /* 글씨체 나눔고딕 https://fonts.google.com/specimen/Nanum+Gothic?subset=korean&query=na#standard-styles */
+    font-family: 'Nanum Gothic', sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+.intro_bg {
+    background-image: url("_images/fishing_boat.jpg");
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* .intro_bg::after {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    content:"";
+    opacity: 0.8;
+} */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 12px;
+    font-size: 20px;
+}
+.nav_logo > a {
+    color: white;
+}
+.nav_logo > a > i {
+    color:skyblue;
+}
+.nav_menu {
+    display: flex;
+    margin-left: -120px;
+}
+.nav_menu > li {
+    padding: 8px 20px;
+}
+.nav_menu > li > a {
+    color: white;
+}
+.nav_login > a {
+    color: white;
+}
+.nav_login > a > i {
+    color: white;
+}
+.nav_menu > li:hover{
+    background-color: rgb(50, 191, 166);
+    border-radius: 4px;
+}
+.intro_text {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 300%;
+}
+#main_text {
+    color: rgb(255, 255, 255);
+}
+.nav_login {
+    font-size: 15px;
+}
+
+/* 로그인 페이지 css */
+.main_section {
+    display: flex;
+    justify-content: center;
+}
+.main_center_screen {
+    position: absolute;
+    margin-top: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 210, 249, 0.5);
+    flex-grow: 1;
+    height: auto;
+    width: 450px;
+    border-radius: 10px;
+    /* 마진 및 페딩 수치 적용순서는 top부터 시계방향(top-right-buttom-left) */
+    padding: 30px 0 20px 0;
+}
+.main_center_screen > input, button {
+    padding: 10px;
+    margin: 20px;
+    font-size: 15px;
+}
+.account {
+    width: 80%;
+}
+
+/* 게시판 페이지 css */
+.board_main > h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.board_main {
+    width: 1000px;
+	margin:auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+}
+table td,th {
+    border-bottom:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background: rgb(80, 210, 249, 0.5);
+}
+#button_writing_create {
+    text-align: right;
+    padding: 10px 0 10px 0;
+}
+#button_writing_create > input {
+    height: 25px;
+    width: 50px;
+}
+.board_title, .board_content {
+    width: 100%;
+}
+.borad_writing_create_button {
+    display: flex;
+}
+.borad_writing_create_button > input {
+    flex:1;
+    height: 30px;
+}
+.board_writing_read_content {
+    min-height: 350px;
+    text-align: left;
+}
+#read_title {
+    text-align: left;
+}
