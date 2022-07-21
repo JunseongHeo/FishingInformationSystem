@@ -2,27 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.FIS.model.dao.BoardMapper">
-    <select id="findAll" resultType="com.example.FIS.model.dto.ArticlesDto">
-        SELECT * FROM articles;
-    </select>
 
-    <insert id="create" >
-        INSERT INTO articles(article_title,article_text,member_id)
-        VALUES(#{article_title},#{article_text},#{member_id});
+    <insert id="createPost">
+        insert into board(title, contents, writer, RegisterDate, hits)
+        values(#{title}, #{contents}, #{writer}, now(), 0);
     </insert>
 
-    <select id="findOne" resultType="com.example.FIS.model.dto.ArticlesDto">
-
-        SELECT * FROM articles where article_id=#{article_id} ;
+    <select id="getList" resultType="com.example.FIS.model.dto.BoardDto">
+        SELECT * FROM board ORDER BY bno DESC;
     </select>
 
-    <delete id="deleteList">
-        DELETE from articles where article_id=#{article_id} ;
+    <select id="getPost" resultType="com.example.FIS.model.dto.BoardDto">
+        SELECT * FROM board where bno=#{bno};
+    </select>
+
+    <update id="updateHits" parameterType="Integer">
+        update board set hits=hits+1 where bno=#{bno};
+    </update>
+
+    <delete id="deletePost">
+        DELETE from board where bno=#{bno};
     </delete>
 
     <update id="update">
-        UPDATE articles
-        SET article_title=#{article_title}, article_text=#{article_text}
-        WHERE article_id=#{article_id} ;
+        update board
+        set title=#{title}, contents=#{contents}
+        where bno=#{bno};
     </update>
+
 </mapper>
