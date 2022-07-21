@@ -56,8 +56,8 @@ public class BoardController {
         return "board/updatePost";
     }
     @PostMapping("/getPost/{bno}/update") // 게시글 수정
-    public String boardUpdatePost(int bno, BoardDto articles){
-        boardService.updatePost(articles);
-        return "redirect:/boards";
+    public String boardUpdatePost(BoardDto boardDto){
+        boardService.updatePost(boardDto);
+        return "redirect:/board";
     }
 }

@@ -34,31 +34,30 @@
             </div>
         </nav> <!--네비게이션바 끝-->
         <section class="main_section"> <!--가운데 세션-->
-                <div class="board_main">
-                    <h2>게시글 수정</h2>
-                    <form method="post" action="/board/createPost">
-                        <input type="hidden" value="board_write" name="command">
-                        <table class="borad_writing_table">
-                            <tr>
-                                <th>제목</th>
-                                <td><input type="text" name="title" class="board_title" value="${postInfo.title}" required></td>
-                            </tr>
-                            <tr>
-                                <th>작성자</th>
-                                <td>${postInfo.writer}</td>
-                            </tr>
-                            <tr>
-                                <th>내용</th>
-                                <td><textarea cols="80" rows="25" name="contents" class="board_content">${postInfo.contents}</textarea></td>
-                            </tr>
-                        </table>
-                        <div class="borad_writing_create_button">
-                            <input class="btn" type="submit" value="등록">
-                            <input class="btn" type="button" value="취소" onclick=' location.href="${path}/board/getPost/${postInfo.bno}" '>
-                        </div>
-                    </form>
-                </div>             
-            </section>
+            <div class="board_main">
+                <h2>게시글 수정</h2>
+                <form method="post" action="${path}/board/getPost/${postInfo.bno}/update">
+                    <table class="borad_writing_table">
+                        <tr>
+                            <th>제목</th>
+                            <td><input type="text" name="title" class="board_title" value="${postInfo.title}" required></td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th>
+                            <td>${postInfo.writer}</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td><textarea cols="80" rows="25" name="contents" class="board_content">${postInfo.contents}</textarea></td>
+                        </tr>
+                    </table>
+                    <div class="borad_writing_create_button">
+                        <input class="btn" type="submit" value="수정">
+                        <input class="btn" type="button" value="취소" onclick=' location.href="${path}/board/getPost/${postInfo.bno}" '>
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <html lang="ko">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +58,7 @@
                             ${listUp.title}</a>
                         </td>
                         <td>${listUp.writer}</td>
-                        <td>${listUp.registerDate}</td>
+                        <td><fmt:formatDate pattern="yyyy-MM-dd" value="${listUp.registerDate}" /></td>
                         <td>${listUp.hits}</td>
                     </tr>
                     </c:forEach>

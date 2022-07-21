@@ -48,9 +48,9 @@
                     </table>
                     <form method="post" action="${postInfo.bno}/delete">
                         <div class="borad_writing_create_button">
+                        <input class="btn" type="button" value="목록" onclick=' location.href="${path}/board" '>
                         <input class="btn" type="button" value="수정" onclick=' location.href="${path}/board/getPost/${postInfo.bno}/update" '>
                         <input class="btn" type="submit" value="삭제">
-                        <input class="btn" type="button" value="목록" onclick=' location.href="${path}/board" '>
                         </div>
                     </form>
             </div>

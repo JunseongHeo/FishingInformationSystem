@@ -1,0 +1,18 @@
+create database test;
+show databases;
+drop database test;
+use test;
+show table status;
+drop table test;
+
+create table board(
+	bno int not null auto_increment primary key,
+    title varchar(100) not null,
+    contents varchar(1000),
+    writer varchar(100) not null,
+    registerDate datetime,
+    hits int
+);
+
+select * from board;
+

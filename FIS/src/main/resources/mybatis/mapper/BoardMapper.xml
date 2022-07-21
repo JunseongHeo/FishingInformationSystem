@@ -24,7 +24,7 @@
         DELETE from board where bno=#{bno};
     </delete>
 
-    <update id="update">
+    <update id="updatePost">
         update board
         set title=#{title}, contents=#{contents}
         where bno=#{bno};
