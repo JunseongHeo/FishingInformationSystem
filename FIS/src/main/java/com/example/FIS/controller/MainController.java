@@ -12,8 +12,12 @@ public class MainController {
         return "index";
     }
     @GetMapping("/login")
-    public String Login(){
+    public String moveLoginPage(){
         return "board/login"; // 로그인페이지 호출
+    }
+    @GetMapping("/location")
+    public String moveLocationPage(){
+        return "location/location"; // 로그인페이지 호출
     }
 //    @GetMapping("/board")
 //    public String Board(){

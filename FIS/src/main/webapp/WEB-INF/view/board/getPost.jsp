@@ -21,10 +21,11 @@
                 </a>
             </div>
             <ul class="nav_menu"> <!--메뉴블럭-->
-                <li><a href="http://www.kff.or.kr/fishing/zoneList.php" target='_blank'>낚시터 찾기</a></li>
-                <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
-                <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
-                <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
+                    <li><a href="<c:url value='/location'/>" target='_blank'>낚시터 찾기</a></li>
+                    <li><a href="#">날씨 정보</a></li>
+                    <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
+                    <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
+                    <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
             </ul>
             <div class="nav_login">
                 <a href="../_login/login_main.html" title="로그인">
