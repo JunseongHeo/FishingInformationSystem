@@ -49,6 +49,7 @@
                     <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
                 </div>
             </div>
+
             <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=72f719b911cadc391d972ee5c8f1c118&libraries=clusterer"></script>
             <script>
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
@@ -58,6 +59,22 @@
                         mapTypeId : kakao.maps.MapTypeId.ROADMAP
                     };
                 var map = new kakao.maps.Map(mapContainer, mapOption);
+
+                function setMapType(maptype) {
+                    var roadmapControl = document.getElementById('btnRoadmap');
+                    var skyviewControl = document.getElementById('btnSkyview');
+                    if (maptype === 'roadmap') {
+                        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+                        roadmapControl.className = 'selected_btn';
+                        skyviewControl.className = 'btn';
+                    } else {
+                        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+                        skyviewControl.className = 'selected_btn';
+                        roadmapControl.className = 'btn';
+                    }
+                }
+                function zoomIn() { map.setLevel(map.getLevel() - 1); }
+                function zoomOut() { map.setLevel(map.getLevel() + 1); }
 
                 var clusterer = new kakao.maps.MarkerClusterer({
                     map: map,
