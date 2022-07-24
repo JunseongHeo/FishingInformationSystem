@@ -67,7 +67,7 @@
                             <a href="${path}/board/getPost/${listUp.bno}">
                             ${listUp.title}</a>
                         </td>
-                        <td>${ListUp.userName}</td>
+                        <td>${listUp.userName}</td>
                         <td><fmt:formatDate pattern="yyyy-MM-dd" value="${listUp.registerDate}" /></td>
                         <td>${listUp.hits}</td>
                     </tr>

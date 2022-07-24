@@ -17,4 +17,5 @@ public class BoardDto {
     private String userName; // 로그인회원 이름
     private Timestamp registerDate; // 글 작성일
     private int hits; // 게시글 조회수
+
 }

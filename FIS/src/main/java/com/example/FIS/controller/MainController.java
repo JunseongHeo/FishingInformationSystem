@@ -11,7 +11,6 @@ public class MainController {
     public String Main() {
         return "index";
     }
-
     @GetMapping("/location")
     public String moveLocationPage(){
         return "location/location"; // 로그인페이지 호출

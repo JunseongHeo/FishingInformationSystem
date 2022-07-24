@@ -47,7 +47,8 @@
                 <div class="board_main">
                     <h2>게시글 작성</h2>
                     <form method="post" action="/board/createPost">
-                        <input type="hidden" value="board_write" name="command">
+                        <input type="hidden" value="${member.id}" name="userId">
+                        <input type="hidden" value="${member.userName}" name="userName">
                         <table class="borad_writing_table">
                             <tr>
                                 <th>제목</th>

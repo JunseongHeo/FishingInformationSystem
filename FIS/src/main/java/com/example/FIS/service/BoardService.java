@@ -34,4 +34,5 @@ public class BoardService {
     public int updatePost(BoardDto boardDto){ // 게시글 수정
         return boardMapper.updatePost(boardDto);
     }
+
 }

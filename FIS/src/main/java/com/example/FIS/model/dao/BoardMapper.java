@@ -16,4 +16,5 @@ public interface BoardMapper {
     void updateHits(int bno); // U; 조회수 증가
     int deletePost(int bno); // D; 게시글 삭제
     int updatePost(BoardDto boardDto); // U; 게시글 수정
+
 }
