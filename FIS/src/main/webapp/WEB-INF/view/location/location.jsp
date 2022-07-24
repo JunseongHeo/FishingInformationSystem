@@ -80,7 +80,6 @@
                     var infowindow = new kakao.maps.InfoWindow({
                         content : markersArry[i][2]
                     })
-                    infowindow.open(map, marker);
                     markers.push(marker);
                     kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
                     kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
