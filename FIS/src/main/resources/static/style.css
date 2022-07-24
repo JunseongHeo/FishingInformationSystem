@@ -107,6 +107,11 @@ html, body {
 .account {
     width: 80%;
 }
+.warning_loginFalse {
+    margin-bottom: 30px;
+    text-align: center;
+    color : red;
+}
 
 /* 게시판 페이지 css */
 .board_main > h2 {

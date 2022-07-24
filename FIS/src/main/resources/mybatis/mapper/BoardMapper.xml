@@ -4,8 +4,8 @@
 <mapper namespace="com.example.FIS.model.dao.BoardMapper">
 
     <insert id="createPost">
-        insert into board(title, contents, writer, RegisterDate, hits)
-        values(#{title}, #{contents}, #{writer}, now(), 0);
+        insert into board(title, contents, userId, userName, RegisterDate, hits)
+        values(#{title}, #{contents}, #{userId}, #{userName}, now(), 0);
     </insert>
 
     <select id="getList" resultType="com.example.FIS.model.dto.BoardDto">

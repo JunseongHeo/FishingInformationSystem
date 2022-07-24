@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -13,27 +14,35 @@
 <body>
     <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
     <div class ="wrap"> <!--전체-->
-        <nav class="navbar"> <!--네비게이션바. header-->
-            <div class="nav_logo"> <!--로고블럭-->
-                <a href="<c:url value='/'/>" title="메인화면으로 이동">
+            <nav class="navbar"> <!--네비게이션바-->
+                <div class="nav_logo"> <!--로고블럭-->
+                    <a href="<c:url value='/'/>" title="메인화면으로 이동">
                     <i class="fa-solid fa-fish"></i>
                     낚시 정보 시스템
-                </a>
-            </div>
-            <ul class="nav_menu"> <!--메뉴블럭-->
-                    <li><a href="<c:url value='/location'/>" target='_blank'>낚시터 찾기</a></li>
+                    </a>
+                </div>
+                <ul class="nav_menu"> <!--메뉴블럭-->
+                    <li><a href="<c:url value='/location'/>">낚시터 찾기</a></li>
                     <li><a href="#">날씨 정보</a></li>
-                    <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
-                    <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
+                    <li><a href="https://www.yanolja.com/">숙박</a></li>
+                    <li><a href="http://www.dinakmall.co.kr/">마켓</a></li>
                     <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
-            </ul>
-            <div class="nav_login">
-                <a href="../_login/login_main.html" title="로그인">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    로그인
-                </a>
-            </div>
-        </nav> <!--네비게이션바 끝-->
+                </ul>
+                <div class="nav_login">
+                    <c:if test = "${member == null}">
+                    <a href="<c:url value='/login'/>" title="로그인">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        로그인
+                    </a>
+                    </c:if>
+                    <c:if test = "${member != null}">
+                    <a href="<c:url value='/login/logout'/>" title="로그아웃">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        로그아웃
+                    </a>
+                    </c:if>
+                </div>
+            </nav> <!--네비게이션바 끝-->
         <section class="main_section"> <!--가운데 세션-->
                 <div class="board_main">
                     <h2>게시글 작성</h2>
@@ -46,7 +55,7 @@
                             </tr>
                             <tr>
                                 <th>작성자</th>
-                                <td><input type="text" name="writer" class="board_title" required></td>
+                                <td>${member.userName}</td>
                             </tr>
                             <tr>
                                 <th>내용</th>

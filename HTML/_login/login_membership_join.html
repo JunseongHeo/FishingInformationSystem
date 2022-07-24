@@ -12,40 +12,41 @@
 <body>
     <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
     <div class ="wrap"> <!--전체-->
-            <nav class="navbar"> <!--네비게이션바. header-->
-                <div class="nav_logo"> <!--로고블럭-->
-                    <a href="../index.html" title="메인화면으로 이동">
-                    <i class="fa-solid fa-fish"></i>
-                    낚시 정보 시스템
-                    </a>
-                </div>
-                <ul class="nav_menu"> <!--메뉴블럭-->
-                    <li><a href="http://www.kff.or.kr/fishing/zoneList.php" target='_blank'>낚시터 찾기</a></li>
-                    <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
-                    <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
-                    <li><a href="../_messageboard/board_main.html">커뮤니티</a></li>
-                </ul>
-                <div class="nav_login">
-                    <a href="./login_main.html" title="로그인">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        로그인
-                    </a>
-                </div>
-            </nav> <!--네비게이션바 끝--> 
+        <nav class="navbar"> <!--네비게이션바. header-->
+            <div class="nav_logo"> <!--로고블럭-->
+                <a href="../index.html" title="메인화면으로 이동">
+                <i class="fa-solid fa-fish"></i>
+                낚시 정보 시스템
+                </a>
+            </div>
+            <ul class="nav_menu"> <!--메뉴블럭-->
+                <li><a href="http://www.kff.or.kr/fishing/zoneList.php" target='_blank'>낚시터 찾기</a></li>
+                <li><a href="https://www.yanolja.com/" target='_blank'>숙박</a></li>
+                <li><a href="http://www.dinakmall.co.kr/" target='_blank'>도구대여/거래</a></li>
+                <li><a href="../_messageboard/board_main.html">커뮤니티</a></li>
+            </ul>
+            <div class="nav_login">
+                <a href="./login_main.html" title="로그인">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    로그인
+                </a>
+            </div>
+        </nav> <!--네비게이션바 끝--> 
+        <form id="join_form" method="post" action="/login/join">
             <section class="main_section"> <!--가운데 세션-->
                 <main class="main_center_screen">
                     <h1 class="box_header">회원가입</h1>
-                    <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account">
-                    <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account">
-                    <input type="text" placeholder="이름" id="name" class="account">
-                    <input type="text" placeholder="생년월일" id="birth" class="account">
-                    <input type="text" placeholder="핸드폰번호" id="phone_number" class="account">
-                    <input type="text" placeholder="지역" id="area" class="account">
-                    <input type="text" placeholder="배 소유 여부" id="ship" class="account">
-                    <input type="text" placeholder="배 이용 가능 시간" id="ship_time" class="account">
-                    <button id="button_membership_join_completion" id="button_membership_join_completion" class="account">회원가입 완료</button>
+                    <input type="text" placeholder="아이디를 입력해주세요" name="id" class="account" required>
+                    <input type="password" placeholder="비밀번호를 입력해주세요" name="pw" class="account" required>
+                    <input type="text" placeholder="이름" name="username" class="account" required>
+                    <input type="text" placeholder="성별" name="gender" class="account" required>
+                    <input type="text" placeholder="핸드폰번호" name="phone" class="account" required>
+                    <input type="text" placeholder="이메일" name="email" class="account" required>
+                    <input type="text" placeholder="주소"  name="address" class="account">
+                    <input id="button_membership_join_completion" class="account" type="submit" value="회원가입 완료">
                 </main>
             </section>
-    </div>
-</body>
-</html>
+        </form>
+     </div>
+    </body>
+    </html>
