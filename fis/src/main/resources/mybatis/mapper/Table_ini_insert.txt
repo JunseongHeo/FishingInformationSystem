@@ -12,8 +12,7 @@ create table board(
 	userName varchar(100) not null,
     registerDate datetime,
     hits int,
-    foreign key(userId) references member(id),
-	unique(userId)
+    foreign key(userId) references member(id)
 );
 
 select * from board;
