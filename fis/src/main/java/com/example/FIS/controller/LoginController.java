@@ -46,10 +46,6 @@ public class LoginController {
             rttr.addFlashAttribute("result", result);
         } else { // 로그인 성공
             session.setAttribute("member", loginVo);
-            session.setAttribute("member_Id", loginVo.getId());
-            session.setAttribute("member_Name", loginVo.getUserName());
-            String member_Id = (String) session.getAttribute("member_Id");
-            String member_Name = (String) session.getAttribute("member_Name");
         }
         return "redirect:/login";
     }
