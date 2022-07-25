@@ -1,9 +1,8 @@
-create database test;
+create database testdb;
 show databases;
-drop database test;
-use test;
+drop database testdb;
+use testdb;
 show table status;
-drop table test;
 
 create table board(
 	bno int not null auto_increment primary key,
