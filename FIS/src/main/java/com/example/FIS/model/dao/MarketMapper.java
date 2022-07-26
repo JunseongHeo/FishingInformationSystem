@@ -1,6 +1,7 @@
 package com.example.FIS.model.dao;
 
 import com.example.FIS.model.dto.BoardDto;
+import com.example.FIS.model.dto.MarketDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -10,9 +11,11 @@ import java.util.List;
 @Repository
 public interface MarketMapper {
 
+    List<MarketDto> getProductList(); // R; 상품 목록 조회
+    MarketDto getProductInfo(String p_id); // R; 개별 상품 페이지 조회
+
+
     void createProductPage(BoardDto boardDto); // C; 상품 페이지 등록
-    List<BoardDto> getMarketList(); // R; 상품 목록 조회
-    BoardDto getProductPage(int bno); // R; 개별 상품 페이지 조회
     void updateHits(int bno); // U; 조회수 증가
     int deleteProductPage(int bno); // D; 상품 페이지 삭제
     int updateProductPage(BoardDto boardDto); // U; 상품 페이지 수정

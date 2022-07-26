@@ -26,7 +26,7 @@
                     <li><a href="<c:url value='/location'/>">낚시터 찾기</a></li>
                     <li><a href="#">날씨 정보</a></li>
                     <li><a href="https://www.yanolja.com/">숙박</a></li>
-                    <li><a href="http://www.dinakmall.co.kr/">마켓</a></li>
+                    <li><a href="<c:url value='/market'/>">마켓</a></li>
                     <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
                 </ul>
                 <div class="nav_login">
