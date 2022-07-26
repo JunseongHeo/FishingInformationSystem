@@ -27,7 +27,7 @@
                 <p>${listUp.p_description}</p>
                 <p><fmt:formatNumber value="${listUp.p_unitPrice}" pattern="#,###"/>원</p>
                 <p>
-                    <a href="./productInfo/${listUp.p_id}"
+                    <a href="./${listUp.p_id}"
                     class="btn btn-secondary" role="button"> 상세보기 </a>
                 </p>
                 </div>
