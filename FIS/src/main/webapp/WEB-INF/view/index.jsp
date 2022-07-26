@@ -15,13 +15,12 @@
 <body>
     <div class ="wrap"> <!--전체-->
         <div class="intro_bg"> <!--배경-->
-            <jsp:include page="topNav.jsp" />
+            <jsp:include page="topNav.jsp" /> <!-- 네비바 -->
             <div class="intro_text">
                 <h1 id="main_text">당신을 위한 낚시 정보 시스템</h1>
                 <h4 id="main_text" class="contents">필요한 정보들을 한 눈에! '낚시 정보 시스템'과 함께하세요</h4>
             </div>
         </div>
     </div>
-
 </body>
 </html>

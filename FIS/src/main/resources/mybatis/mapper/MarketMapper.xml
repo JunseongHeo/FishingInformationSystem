@@ -11,4 +11,19 @@
         SELECT * FROM product where p_id=#{p_id};
     </select>
 
+    <insert id="addProduct">
+        insert into product(p_id, p_name, p_unitPrice, p_description, p_manufacturer, p_category, p_unitsInStock, p_condition, p_filename, p_user)
+        values(#{p_id}, #{p_name}, #{p_unitPrice}, #{p_description}, #{p_manufacturer}, #{p_category}, #{p_unitsInStock}, #{p_condition}, #{p_filename}, #{p_user});
+    </insert>
+
+    <delete id="deleteProduct">
+        DELETE from product where p_id=#{p_id};
+    </delete>
+
+    <update id="updateProduct">
+        update product
+        set p_id=#{p_id}, p_name=#{p_name}, p_unitPrice=#{p_unitPrice}, p_description=#{p_description}, p_manufacturer=#{p_manufacturer}, p_category=#{p_category}, p_unitsInStock=#{p_unitsInStock}, p_condition=#{p_condition}, p_filename=#{p_filename}
+        where p_id=#{p_id};
+    </update>
+
 </mapper>

@@ -26,7 +26,12 @@ public class MarketService {
         return marketMapper.getProductInfo(p_id);
     } // 개별 상품 상세정보 조회
 
-//    void createProductPage(BoardDto boardDto); // C; 상품 페이지 등록
+    public void addProduct(MarketDto marketDto){ // C; 상품 등록
+        marketMapper.addProduct(marketDto);
+    };
+    public String deleteProduct(String p_id){ // 상품 삭제
+        return marketMapper.deleteProduct(p_id);
+    }
 //    BoardDto getProductPage(int bno); // R; 개별 상품 페이지 조회
 //    void updateHits(int bno); // U; 조회수 증가
 //    int deleteProductPage(int bno); // D; 상품 페이지 삭제

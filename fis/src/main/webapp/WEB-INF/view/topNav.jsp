@@ -3,19 +3,19 @@
 <c:set var="URL" value="${pageContext.request.requestURL}" />
 
 <nav class="navbar"> <!--네비게이션바-->
-    <div class="nav_logo"> <!--로고블럭-->
+    <div class="nav_logo"> <!--좌측 로고블럭-->
         <a href="<c:url value='/'/>" title="메인화면으로 이동">
         <i class="fa-solid fa-fish"></i>
         낚시 정보 시스템
         </a>
     </div>
-    <ul class="nav_menu"> <!--메뉴블럭-->
+    <ul class="nav_menu"> <!--중앙 메뉴블럭-->
         <li><a href="<c:url value='/location'/>">낚시터 찾기</a></li>
         <li><a href="#">날씨 정보</a></li>
         <li><a href="<c:url value='/market'/>">마켓</a></li>
         <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
     </ul>
-    <div class="nav_login">
+    <div class="nav_login"> <!--우측 로그인블럭-->
         <c:if test = "${member == null}">
         <a href="<c:url value='/login'/>" title="로그인">
             <i class="fa-solid fa-right-to-bracket"></i>

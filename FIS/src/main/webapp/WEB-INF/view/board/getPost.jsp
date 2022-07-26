@@ -31,8 +31,8 @@
                         <div class="borad_writing_create_button">
                         <input class="btn" type="button" value="목록" onclick=' location.href="${path}/board" '>
                         <c:if test = "${sessionScope.member.id eq postInfo.userId }">
-                        <input class="btn" type="button" value="수정" onclick=' location.href="${path}/board/getPost/${postInfo.bno}/update" '>
-                        <input class="btn" type="submit" value="삭제">
+                            <input class="btn" type="button" value="수정" onclick=' location.href="${path}/board/getPost/${postInfo.bno}/update" '>
+                            <input class="btn" type="submit" value="삭제">
                         </c:if>
                         </div>
                     </form>

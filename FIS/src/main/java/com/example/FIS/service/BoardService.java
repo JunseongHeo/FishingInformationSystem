@@ -22,7 +22,6 @@ public class BoardService {
     public List<BoardDto> getList(){ // 게시글 목록 조회
         return boardMapper.getList();
     }
-
     public BoardDto getPost(int bno){ // 개별 게시글 조회 + 조회수 증가
         boardMapper.updateHits(bno);
         return boardMapper.getPost(bno);
@@ -30,7 +29,6 @@ public class BoardService {
     public int deletePost(int bno){ // 게시글 삭제
         return boardMapper.deletePost(bno);
     }
-
     public int updatePost(BoardDto boardDto){ // 게시글 수정
         return boardMapper.updatePost(boardDto);
     }

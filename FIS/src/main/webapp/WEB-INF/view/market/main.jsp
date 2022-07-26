@@ -7,11 +7,16 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<meta charset="UTF-8">
-<title>웹쇼핑몰</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
+    <title>웹쇼핑몰</title>
 </head>
 <body>
+    <jsp:include page="../topNav.jsp" /> <!-- 네비바 -->
 	<jsp:include page="menu.jsp" />
 	
 	<%

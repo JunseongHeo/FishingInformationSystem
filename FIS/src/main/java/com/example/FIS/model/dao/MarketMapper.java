@@ -13,11 +13,10 @@ public interface MarketMapper {
 
     List<MarketDto> getProductList(); // R; 상품 목록 조회
     MarketDto getProductInfo(String p_id); // R; 개별 상품 페이지 조회
+    void addProduct(MarketDto marketDto); // C; 상품 등록
 
-
-    void createProductPage(BoardDto boardDto); // C; 상품 페이지 등록
     void updateHits(int bno); // U; 조회수 증가
-    int deleteProductPage(int bno); // D; 상품 페이지 삭제
+    String deleteProduct(String p_id); // D; 상품 페이지 삭제
     int updateProductPage(BoardDto boardDto); // U; 상품 페이지 수정
 
     void addCart(BoardDto boardDto); // C; 장바구니에 상품 등록

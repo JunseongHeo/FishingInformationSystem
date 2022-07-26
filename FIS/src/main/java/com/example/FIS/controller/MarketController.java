@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -21,9 +22,9 @@ public class MarketController {
     public MarketController(MarketService marketService) {
         this.marketService = marketService;
     }
-    @GetMapping("")
+    @GetMapping("") // 마켓 메인페이지 호출
     public String moveMarketPage(){
-        return "market/main"; // 마켓 메인페이지 호출
+        return "market/main";
     }
     @GetMapping("/product/list") // 상품목록 조회
     public String moveProductListPage(Model model){
@@ -37,18 +38,19 @@ public class MarketController {
         model.addAttribute("productInfo", marketDto);
         return "market/product/productInfo";
     }
-    @GetMapping("/product/add")
+    @GetMapping("/product/add") // 상품등록 페이지이동
     public String moveProductAddPage(){
-        return "market/product/add"; // 상품등록
+        return "market/product/add";
     }
-    @GetMapping("/product/edit")
-    public String moveProductEditPage(){
-        return "market/product/edit"; // 상품수정
+    @PostMapping("/product/add") // 상품 등록
+    public String addProduct(MarketDto marketDto){
+        marketService.addProduct(marketDto);
+        return "redirect:/market/product/list";
     }
-    @GetMapping("/product/delete")
-    public String moveProductDeletePage(){
-        return "market/product/delete"; // 상품삭제
+    @PostMapping("/product/{p_id}/delete") // 상품 삭제
+    public String deleteProduct(@PathVariable String p_id){
+        marketService.deleteProduct(p_id);
+        return "redirect:/market/product/list";
     }
-
 
 }

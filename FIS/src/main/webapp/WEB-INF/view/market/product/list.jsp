@@ -5,11 +5,16 @@
 <c:set var="URL" value="${pageContext.request.requestURL}" />
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<meta charset="UTF-8">
-<title>상품 목록</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
+    <title>상품 목록</title>
 </head>
 <body>
+    <jsp:include page="../../topNav.jsp" /> <!-- 네비바 -->
 	<jsp:include page="../menu.jsp" />
 	
 	<div class="jumbotron">
@@ -27,8 +32,7 @@
                 <p>${listUp.p_description}</p>
                 <p><fmt:formatNumber value="${listUp.p_unitPrice}" pattern="#,###"/>원</p>
                 <p>
-                    <a href="./${listUp.p_id}"
-                    class="btn btn-secondary" role="button"> 상세보기 </a>
+                    <a href="./${listUp.p_id}" class="btn btn-secondary" role="button"> 상세보기 </a>
                 </p>
                 </div>
             </c:forEach>
