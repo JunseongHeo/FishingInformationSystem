@@ -1,6 +1,7 @@
 package com.example.FIS.controller;
 
 import com.example.FIS.model.dto.BoardDto;
+import com.example.FIS.model.dto.DeliveryDto;
 import com.example.FIS.model.dto.MarketDto;
 import com.example.FIS.service.LoginService;
 import com.example.FIS.service.MarketService;
@@ -22,6 +23,7 @@ public class MarketController {
     public MarketController(MarketService marketService) {
         this.marketService = marketService;
     }
+
     @GetMapping("") // 마켓 메인페이지 호출
     public String moveMarketPage(){
         return "market/main";
@@ -42,15 +44,36 @@ public class MarketController {
     public String moveProductAddPage(){
         return "market/product/add";
     }
-    @PostMapping("/product/add") // 상품 등록
-    public String addProduct(MarketDto marketDto){
-        marketService.addProduct(marketDto);
+    @PostMapping("/product/add") // 상품 등록 + 기본 배송정보 등록
+    public String addProduct(MarketDto marketDto, DeliveryDto deliveryDto){
+        marketService.addProduct(marketDto, deliveryDto);
         return "redirect:/market/product/list";
     }
-    @PostMapping("/product/{p_id}/delete") // 상품 삭제
+    @PostMapping("/product/{p_id}/delete") // 상품 삭제 + 기본 배송정보 삭제
     public String deleteProduct(@PathVariable String p_id){
         marketService.deleteProduct(p_id);
         return "redirect:/market/product/list";
     }
-
+    @GetMapping("/product/{p_id}/edit") // 상품수정 페이지 이동
+    public String moveProductEditPage(@PathVariable String p_id, Model model){
+        MarketDto marketDto = marketService.getProductInfo(p_id);
+        model.addAttribute("productInfo", marketDto);
+        return "market/product/edit";
+    }
+    @PostMapping("/product/{p_id}/edit") // 상품수정
+    public String ProductEdit(MarketDto marketDto){
+        marketService.editProduct(marketDto);
+        return "redirect:/market/product/list";
+    }
+    @GetMapping("/product/{p_id}/delivery") // 배송주문 페이지 이동
+    public String moveDeliveryInfo(@PathVariable String p_id, Model model){
+        DeliveryDto deliveryDto = marketService.getDeliveryInfo(p_id);
+        model.addAttribute("deliveryInfo", deliveryDto);
+        return "market/product/deliveryOrder";
+    }
+    @PostMapping("/product/{p_id}/delivery") // 배송주문
+    public String ProductDeliveryOrder(DeliveryDto deliveryDto){
+        marketService.productDeliveryOrder(deliveryDto);
+        return "redirect:/market/product/list";
+    }
 }

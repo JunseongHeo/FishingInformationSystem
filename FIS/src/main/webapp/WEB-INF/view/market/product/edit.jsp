@@ -1,121 +1,120 @@
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.text.DecimalFormat"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<% 
-	request.setCharacterEncoding("UTF-8"); 
-   	DecimalFormat dfFormat = new DecimalFormat("###,###"); //숫자를 천단위 구분하게끔...		
-%>
-
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="URL" value="${pageContext.request.requestURL}" />
+<% request.setCharacterEncoding("UTF-8"); %>
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
-<meta charset="UTF-8">
-<title>상품 수정</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
+    <title>상품 등록</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp" />
+    <jsp:include page="../../topNav.jsp" /> <!-- 네비바 -->
+	<jsp:include page="../menu.jsp" />
+
+	<!-- 점보트론은 대형전광판이라는 의미를 지니고 있는데, 다양한 컴포넌트(텍스트, 이미지, 회사로고 등) 포함 가능 -->
 	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">상품 수정</h1>
-		</div>	
+        <div class="container">
+            <h1 class="display-4">상품 등록</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
 	</div>
-	<%@ include file="dbconn.jsp" %> <!-- db를 연동하는 부분 -->
-	
-	<% 
-		//어떤 제품을 편집할지 id값이 넘어오는 것을 받고 있다.
-		String productId = request.getParameter("id");
-	
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		
-		String sql = "select * from product where p_id = ?";
-		//Connection객체로 부터 쿼리문를 주고 PreparedStatement를 얻고 있다.
-		pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, productId);
-		
-		//쿼리문의 결과를 받아오고 있다.
-		rs = pstmt.executeQuery();
-		
-		if(rs.next()) {
-	%>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
-				<img alt="image" src="c:/upload/<%=rs.getString("p_filename") %>" style="width: 100%">
-			</div>
-			<!-- xs,sm,md,lg는 화면 크기에 따라서 어떻게 동작하는지 설정 -->
-			<div class="col-md-7">
-				<form name="newProduct" action="./processUpdateProduct.jsp" class="form-horizontal" 
-				      method="post" enctype="multipart/form-data">
-					<div class="form-group row">
-						<label class="col-sm-2">상품 코드</label>
-						<div class="col-sm-3">
-							<input type="text" id="productId" name="productId" class="form-control" value='<%= rs.getString("p_id") %>'>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-2">상품명</label>
-						<div class="col-sm-3">
-							<input type="text" id="name" name="name" class="form-control" value='<%= rs.getString("p_name") %>'>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-2">가격</label>
-						<div class="col-sm-3">
-							<input type="text" id="unitPrice" name="unitPrice" class="form-control" value='<%= rs.getInt("p_unitPrice") %>'>
-						</div>
-					</div> 
-					<div class="form-group row">
-						<label class="col-sm-2">상세 설명</label>
-						<div class="col-sm-3">
-							<input type="text" id="description" name="description" class="form-control" value='<%= rs.getString("p_description") %>'>
-						</div>
-					</div>    
-					<div class="form-group row">
-						<label class="col-sm-2">제조사</label>
-						<div class="col-sm-3">
-							<input type="text" id="manufacturer" name="manufacturer" class="form-control" value='<%= rs.getString("p_manufacturer") %>'>
-						</div>
-					</div>   
-					<div class="form-group row">
-						<label class="col-sm-2">분류</label>
-						<div class="col-sm-3">
-							<input type="text" id="category" name="category" class="form-control" value='<%= rs.getString("p_category") %>'>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-2">재고 수</label>
-						<div class="col-sm-3">
-							<input type="text" id="unitsInStock" name="unitsInStock" class="form-control" value='<%= rs.getLong("p_unitsInStock") %>'>
-						</div>
-					</div>  
-					<div class="form-group row">
-						<label class="col-sm-2">상태</label>
-						<div class="col-sm-5">
-							<input type="radio" name="condition" value="New">신규 제품
-							<input type="radio" name="condition" value="Old">중고 제품
-							<input type="radio" name="condition" value="Refurbished">재생 제품
-						</div>
-					</div> 
-					<div class="form-group row">
-						<label class="col-sm-2">이미지</label>
-						<div class="col-sm-5">
-							<input type="file" name="productImage" class="form-control" >
-						</div>
-					</div>  
-					
-					<div class="form-group row">
-						<!-- col-sm-offset-2은 좌측의 공백을 2칸 주겠다. -->					
-						<div class="col-sm-offset-2 col-sm-10">
-							<input type="submit" class="btn btn-primary" value="편집완료">
-						</div>
-					</div> 		
-				</form>		
-			</div>	
-		</div>
-	</div>
+
+    <div class="container">
+        <!-- class="form-horizontal"은 폼요소들이 수평적으로 배치가 되도록 해줌 -->
+
+        <form action="${path}/market/product/${productInfo.p_id}/edit" class="form-horizontal"
+        	method="post" enctype="multipart/form-data">  <!-- 파일 업로드 -->
+            <div class="form-group row">
+                <!-- 화면 크기가 768px 이상일 때 12컬럼 중 2칸 사용, 반응형으로-->
+                <label class="col-sm-2"><b>상품 코드</b></label>
+                <div class="col-sm-3">
+                	<!-- id 속성을 추가한 것은 유효성 검사를 위해서 이 document에서 자바스크립트 파일에서 참조하기 위함 -->
+                    <input type="text" name="p_id" class="form-control" value="${productInfo.p_id}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>상품명</b></label>
+                <div class="col-sm-3">
+                    <input type="text" name="p_name" class="form-control" value="${productInfo.p_name}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>가격</b></label>
+                <div class="col-sm-3">
+                    <input type="number" name="p_unitPrice" class="form-control" value="${productInfo.p_unitPrice}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>상세정보</b></label>
+                <div class="col-sm-5">
+                    <textarea name="p_description" cols="50" rows="2" class="form-control">${productInfo.p_description}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>제조사</b></label>
+                <div class="col-sm-3">
+                    <input type="text" name="p_manufacturer" class="form-control" value="${productInfo.p_manufacturer}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>분류</b></label>
+                <div class="col-sm-3">
+                    <input type="text" name="p_category" class="form-control" value="${productInfo.p_category}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>재고 수</b></label>
+                <div class="col-sm-3">
+                    <input type="number" name="p_unitsInStock" class="form-control" value="${productInfo.p_unitsInStock}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"><b>상태</b></label>
+                <div class="col-sm-5">
+                    <input type="radio" name="p_condition" value="New"
+                    <c:if test="${productInfo.p_condition eq 'New'}">checked</c:if>> 신규 제품 &nbsp;
+                    <input type="radio" name="p_condition" value="Old"
+                    <c:if test="${productInfo.p_condition eq 'Old'}">checked</c:if>> 중고 제품 &nbsp;
+                    <input type="radio" name="p_condition" value="Refurbished"
+                    <c:if test="${productInfo.p_condition eq 'Refurbished'}">checked</c:if>> 재생 상품 &nbsp;
+                </div>
+            </div>
+
+            <!-- 상품 이미지 업로드 부분 -->
+            <div class="form-group row">
+                <label class="col-sm-2"><b>이미지</b></label>
+                <div class="col-sm-3">
+                    <input type="text" name="p_filename" class="form-control" value="${productInfo.p_filename}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+            	<!-- offset : col의 2만큼 띄워라 -->
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-primary" value="수정완료">
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <jsp:include page="../footer.jsp" />
 </body>
 </html>

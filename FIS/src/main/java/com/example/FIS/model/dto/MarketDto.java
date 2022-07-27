@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,4 +21,5 @@ public class MarketDto {
     private String p_filename; // 상품이미지
     private int quantity;
     private String p_user; // 상품등록 유저아이디
+    private Timestamp regiDate; // 상품 등록일
 }

@@ -4,26 +4,43 @@
 <mapper namespace="com.example.FIS.model.dao.MarketMapper">
 
     <select id="getProductList" resultType="com.example.FIS.model.dto.MarketDto">
-        SELECT * FROM product;
+        SELECT * FROM product ORDER BY regiDate DESC;
     </select>
 
     <select id="getProductInfo" resultType="com.example.FIS.model.dto.MarketDto">
         SELECT * FROM product where p_id=#{p_id};
     </select>
 
+    <select id="getDeliveryInfo" resultType="com.example.FIS.model.dto.DeliveryDto">
+        SELECT * FROM delivery where p_id=#{p_id};
+    </select>
+
     <insert id="addProduct">
-        insert into product(p_id, p_name, p_unitPrice, p_description, p_manufacturer, p_category, p_unitsInStock, p_condition, p_filename, p_user)
-        values(#{p_id}, #{p_name}, #{p_unitPrice}, #{p_description}, #{p_manufacturer}, #{p_category}, #{p_unitsInStock}, #{p_condition}, #{p_filename}, #{p_user});
+        insert into product(p_id, p_name, p_unitPrice, p_description, p_manufacturer, p_category, p_unitsInStock, p_condition, p_filename, p_user, regiDate)
+        values(#{p_id}, #{p_name}, #{p_unitPrice}, #{p_description}, #{p_manufacturer}, #{p_category}, #{p_unitsInStock}, #{p_condition}, #{p_filename}, #{p_user}, now());
     </insert>
 
-    <delete id="deleteProduct">
-        DELETE from product where p_id=#{p_id};
-    </delete>
+    <insert id="addProduct_delivery">
+        insert into delivery(p_id, p_user)
+        select p_id, p_user
+        from product
+        order by regiDate desc limit 1;
+    </insert>
 
-    <update id="updateProduct">
+    <update id="editProduct">
         update product
         set p_id=#{p_id}, p_name=#{p_name}, p_unitPrice=#{p_unitPrice}, p_description=#{p_description}, p_manufacturer=#{p_manufacturer}, p_category=#{p_category}, p_unitsInStock=#{p_unitsInStock}, p_condition=#{p_condition}, p_filename=#{p_filename}
         where p_id=#{p_id};
     </update>
+
+    <update id="productDeliveryOrder">
+        update delivery
+        set buyer=#{buyer}, buyer_name=#{buyer_name}, buyer_phone=#{buyer_phone}, buyer_address=#{buyer_address}
+        where p_id=#{p_id};
+    </update>
+
+    <delete id="deleteProduct">
+        delete from product where p_id=#{p_id};
+    </delete>
 
 </mapper>

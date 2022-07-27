@@ -45,35 +45,30 @@
 	            <div class="col-md-6">
 					<h3> ${productInfo.p_name} </h3>
 					<p> ${productInfo.p_description} </p>
+					<p><b>등록날짜 : <fmt:formatDate value="${productInfo.regiDate}" pattern="yyyy-MM-dd HH:ss"/></b></p>
 					<p><b>상품 코드 : </b><span class="badge badge-danger">${productInfo.p_id}</span></p>
 					<p><b>제조사 : ${productInfo.p_manufacturer}</b></p>
 					<p><b>분류 : ${productInfo.p_category}</b></p>
 					<p><b>재고 수 : <fmt:formatNumber value="${productInfo.p_unitsInStock}" pattern="#,###"/></b></p>
 					<h4><fmt:formatNumber value="${productInfo.p_unitPrice}" pattern="#,###"/>원</h4>
 
-					<form name="addForm" action="./addCart.jsp?id=아이디 %>" method="post">
 					<p>
 						<!-- 상품 주문을 클릭하면 자바스크립트의 핸들러 함수 addToCart()호출되도록 만들었다. -->
-						<a href="#" class="btn btn-info" onclick="addToCart()">상품 주문 >></a>
 						<!-- 장바구니 버튼을 추가하였다.클릭하면 /cart.jsp로 이동하게 만들어 주었다. -->
-						<a href="#" class="btn btn-warning" >장바구니 >></a>
-                        <c:if test = "${sessionScope.member.id eq productInfo.p_user}">
-                            <a href="<c:url value='/market/product/${productInfo.p_id}'/>" class="btn btn-success" role="button">수정 >></a>
-                            <form method="post" id="deleteFrom" action="${postInfo.bno}/delete">
-                            </form>
-                            <a href="#" class="btn btn-danger" role="button" onclick="return chk_form()">삭제 >></a>
-						</c:if>
+						<a href="<c:url value='/market/product/${productInfo.p_id}/delivery'/>" class="btn btn-info">상품 주문 >></a>
+					    <form name="addForm" action="./addCart.jsp?id=아이디 %>" method="post" style="display: inline;">
+					    </form>
 						<a href="<c:url value='/market/product/list'/>" class="btn btn-secondary">상품 목록 >></a>
+                        <c:if test = "${sessionScope.member.id eq productInfo.p_user}">
+                            <a href="<c:url value='/market/product/${productInfo.p_id}/edit'/>" class="btn btn-success" role="button">수정 >></a>
+                            <form method="post" action="${productInfo.p_id}/delete" style="display: inline;">
+                                <input type="submit" class="btn btn-danger" value="삭제 >>">
+                            </form>
+						</c:if>
 					</p>
-					</form>
 				</div>
 			</div>
 	        </div>
     <jsp:include page="../footer.jsp" />
-    <script>
-    function chk_form() {
-        document.getElementById('deleteFrom').submit();
-    }
-    </script>
 </body>
 </html>

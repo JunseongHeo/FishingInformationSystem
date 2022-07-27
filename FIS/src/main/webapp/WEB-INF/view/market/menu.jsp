@@ -14,7 +14,6 @@ pageEncoding="UTF-8"%>
         <ul class="navbar-nav mr-auto"> <!-- mr-auto는 마진을 알아서 잡아주는 코드 -->
             <li class="nav-item"><a class="nav-link" href="<c:url value='/market/product/list'/>">상품목록</a></li>
             <li class="nav-item"><a class="nav-link" href="<c:url value='/market/product/add'/>">상품등록</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">장바구니</a></li>
         </ul>
     </div>
     </div>
