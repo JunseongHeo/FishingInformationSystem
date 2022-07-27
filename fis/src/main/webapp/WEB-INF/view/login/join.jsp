@@ -22,9 +22,9 @@
                 <input type="text" placeholder="아이디를 입력해주세요" name="id" class="account" required>
                 <input type="password" placeholder="비밀번호를 입력해주세요" name="pw" class="account" required>
                 <input type="text" placeholder="이름" name="userName" class="account" required>
-                <input type="text" placeholder="성별" name="gender" class="account" required>
-                <input type="text" placeholder="핸드폰번호" name="phone" class="account" required>
-                <input type="text" placeholder="이메일" name="email" class="account" required>
+                <input type="text" placeholder="성별" name="gender" class="account" >
+                <input type="text" placeholder="핸드폰번호" name="phone" class="account" >
+                <input type="text" placeholder="이메일" name="email" class="account" >
                 <input type="text" placeholder="주소" name="address" class="account">
                 <input id="button_membership_join_completion" class="account" type="submit" value="회원가입 완료">
             </main>

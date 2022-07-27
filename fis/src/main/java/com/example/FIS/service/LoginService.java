@@ -23,7 +23,8 @@ public class LoginService {
     public LoginDto memberLogin(LoginDto loginDto) { // 로그인
         return loginMapper.memberLogin(loginDto);
     }
-
-
+    public int updateMemberInfo(LoginDto loginDto) {
+        return loginMapper.updateMemberInfo(loginDto);
+    }
 
 }

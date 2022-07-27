@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface LoginMapper {
 
     void memberJoin(LoginDto loginDto); // 회원가입
-    public LoginDto memberLogin(LoginDto loginDto); // 로그인
+    LoginDto memberLogin(LoginDto loginDto); // 로그인
+    int updateMemberInfo(LoginDto loginDto); // 회원정보 수정
 
 }

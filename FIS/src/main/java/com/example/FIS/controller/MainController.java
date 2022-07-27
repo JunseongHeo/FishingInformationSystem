@@ -13,7 +13,7 @@ public class MainController {
     }
     @GetMapping("/location")
     public String moveLocationPage(){
-        return "location/location"; // 로그인페이지 호출
+        return "location/location"; // 낚시터찾기 페이지 호출
     }
 
 }

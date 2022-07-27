@@ -9,9 +9,9 @@ create table member(
 	id varchar(100) not null primary key,
     pw varchar(100) not null,
 	userName varchar(100) not null,
-    gender varchar(100) not null,
-    phone varchar(100) not null,
-    email varchar(100) not null,
+    gender varchar(100),
+    phone varchar(100),
+    email varchar(100),
     address varchar(100),
     registerDate datetime
 );
@@ -63,15 +63,18 @@ insert into product values("P1236", "Galaxy Tab", 900000,"212.8*125.6*6.6mm, Sup
 
 create table delivery(
 	p_id varchar(100) not null primary key,
-    seller varchar(100),
+    p_user varchar(100),
     buyer varchar(100),
     buyer_name varchar(100),
     buyer_phone varchar(100),
     buyer_address varchar(100),
-    foreign key(p_id) references product(p_id),
-    foreign key(seller) references member(id),
-    foreign key(buyer) references member(id)
+    foreign key(p_id) references product(p_id) on delete cascade
 );
 
 select * from delivery;
 drop table delivery;
+
+insert into delivery(p_id, p_user) values ( "P1234" , "jun" );
+insert into delivery(p_id, p_user) values ( "P1235" , "jun" );
+insert into delivery(p_id, p_user) values ( "P1236" , "jun" );
+

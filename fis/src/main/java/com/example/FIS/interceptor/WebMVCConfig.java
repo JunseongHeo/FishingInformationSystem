@@ -19,5 +19,6 @@ public class WebMVCConfig  implements WebMvcConfigurer {
         registry.addInterceptor( new LoginInterceptor() ).addPathPatterns( "/market/product/add" );
         registry.addInterceptor( new LoginInterceptor() ).addPathPatterns( "/market/product/{p_id}/edit" );
         registry.addInterceptor( new LoginInterceptor() ).addPathPatterns( "/market/product/{p_id}/delete" );
+        registry.addInterceptor( new LoginInterceptor() ).addPathPatterns( "/market/product/{p_id}/delivery" );
     }
 }

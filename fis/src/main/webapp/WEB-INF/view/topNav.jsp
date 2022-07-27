@@ -14,6 +14,7 @@
         <li><a href="#">날씨 정보</a></li>
         <li><a href="<c:url value='/market'/>">마켓</a></li>
         <li><a href="<c:url value='/board'/>">커뮤니티</a></li>
+        <li><a href="<c:url value='/login/myPage'/>">마이페이지</a></li>
     </ul>
     <div class="nav_login"> <!--우측 로그인블럭-->
         <c:if test = "${member == null}">
