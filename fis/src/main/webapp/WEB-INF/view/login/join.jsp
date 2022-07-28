@@ -2,6 +2,7 @@
 <html lang="ko">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="Path" value="${pageContext.request.contextPath}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
-    <title>낚시 정보 시스템 - 회원가입</title>
+    <title>회원가입</title>
 </head>
 <body>
     <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
@@ -27,6 +28,7 @@
                 <input type="text" placeholder="이메일" name="email" class="account" >
                 <input type="text" placeholder="주소" name="address" class="account">
                 <input id="button_membership_join_completion" class="account" type="submit" value="회원가입 완료">
+                <input id="button_membership_join_completion" class="account" type="button" value="돌아가기" onclick=" location.href='${Path}/login' ">
             </main>
         </form>
         </section>

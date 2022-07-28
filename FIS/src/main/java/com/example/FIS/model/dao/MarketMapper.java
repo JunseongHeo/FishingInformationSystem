@@ -20,5 +20,6 @@ public interface MarketMapper {
     DeliveryDto getDeliveryInfo(String p_id); // 상품 배송정보 조회
     void deleteProduct(String p_id); // D; 상품 페이지 삭제
     void editProduct(MarketDto marketDto); // U; 상품 페이지 수정
+
 }
 

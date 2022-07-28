@@ -20,37 +20,36 @@
         <section class="main_section"> <!--가운데 세션-->
             <main class="main_center_screen">
                 <h2>회원 정보 보기</h2>
-                <form method="post" acton="https:localhost:3070/login/deliveryInfo">
-                    <input type="hidden" value="${sessionScope.member.id}" name="p_user">
-                    <input class="btn" type="submit" value="배송주문 현황">
-                </form>
-                <input class="btn" type="button" value="회원정보 수정" onclick=' location.href="${path}/login/myInfoUpdate" '>
+                <form method="post" action="${Path}/login/myPage">
+                    <input type="hidden" name="id" value="${sessionScope.member.id}">
                     <table>
                         <tr>
                             <th>username</th>
-                            <td>${sessionScope.member.userName}</td>
+                            <td><input type="text" name="userName" value="${sessionScope.member.userName}" required></td>
                         </tr>
                         <tr>
                             <th>gender</th>
-                            <td>${sessionScope.member.gender}</td>
+                            <td><input type="text" name="gender" value="${sessionScope.member.gender}"></td>
                         </tr>
                         <tr>
                             <th>phone</th>
-                            <td>${sessionScope.member.phone}</td>
+                            <td><input type="text" name="phone" value="${sessionScope.member.phone}"></td>
                         </tr>
                         <tr>
                             <th>email</th>
-                            <td>${sessionScope.member.email}</td>
+                            <td><input type="text" name="email" value="${sessionScope.member.email}"></td>
                         </tr>
                         <tr>
                             <th>address</th>
-                            <td>${sessionScope.member.address}</td>
+                            <td><input type="text" name="address" value="${sessionScope.member.address}"></td>
                         </tr>
                         <tr>
                             <th>회원 가입일</th>
                             <td><fmt:formatDate value="${sessionScope.member.registerDate}" pattern="yyyy-MM-dd"/></td>
                         </tr>
                     </table>
+                    <input class="btn" type="submit" value="수정">
+                    <input class="btn" type="button" value="돌아가기" onclick=' location.href="${Path}/login/myPage" '>
                 </form>
             </main>
         </section>

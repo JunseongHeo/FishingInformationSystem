@@ -20,7 +20,6 @@ public class MarketService {
     public MarketService(MarketMapper marketMapper) {
         this.marketMapper = marketMapper;
     }
-
     public List<MarketDto> getProductList(){ // 상품 목록 조회
         return marketMapper.getProductList();
     } // 상품 목록 조회
@@ -42,5 +41,6 @@ public class MarketService {
     } // 게시글 수정
     public void productDeliveryOrder(DeliveryDto deliveryDto){
         marketMapper.productDeliveryOrder(deliveryDto);
-    }
+    } // 구매자 배송 정보 등록
+
 }

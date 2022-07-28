@@ -18,4 +18,16 @@
         where id=#{id};
     </update>
 
+    <select id="findId" resultType="com.example.FIS.model.dto.LoginDto">
+        SELECT id FROM member where userName=#{userName} and phone=#{phone};
+    </select>
+
+    <select id="findPw" resultType="com.example.FIS.model.dto.LoginDto">
+        SELECT pw FROM member where id=#{id} and userName=#{userName} and phone=#{phone};
+    </select>
+
+    <select id="deliveryInfo" resultType="com.example.FIS.model.dto.DeliveryDto">
+        select * from delivery where p_user=#{p_user};
+    </select>
+
 </mapper>
