@@ -4,33 +4,38 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="URL" value="${pageContext.request.requestURL}" />
 <% request.setCharacterEncoding("UTF-8"); %>
+<!DOCTYPE html>
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
-    <title>상품 등록</title>
+<!-- 외부 자바스크립트 파일을 가져오기 위해서 아래와 같이 코드를 입력하도록 함 -->
+<script type="text/javascript" src="./resources/js/validation.js"></script>
+<meta charset="UTF-8">
+<title>상품 등록</title>
+<!-- 나눔스퀘어 폰트 연결 링크 -->
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+<!-- 부트스트랩 연동 -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- css 연결 링크 -->
+<link rel="stylesheet" href="/css/design.css" />
+<link rel="stylesheet" href="/css/productsDesign.css" />
+<link rel="stylesheet" href="/css/addProductDesign.css" />
 </head>
 <body>
+
     <jsp:include page="../../topNav.jsp" /> <!-- 네비바 -->
-	<jsp:include page="../menu.jsp" />
-	
-	<!-- 점보트론은 대형전광판이라는 의미를 지니고 있는데, 다양한 컴포넌트(텍스트, 이미지, 회사로고 등) 포함 가능 -->
-	<div class="jumbotron">
+
+	<!-- 페이지 배너 -->
+    <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4">상품 등록</h1>
+            <h1>상품 등록</h1>
+            <p>판매할 물건의 정보를 입력해주세요</p>
         </div>
     </div>
-    
-    <div class="container">
 
-	</div>
     
-    <div class="container">
+    <div class="container add_con">
         <!-- class="form-horizontal"은 폼요소들이 수평적으로 배치가 되도록 해줌 -->
         <form name="newProduct" action="/market/product/add" class="form-horizontal"
         	method="post" enctype="multipart/form-data">  <!-- 파일 업로드 -->
@@ -45,42 +50,42 @@
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>상품명</b></label>
+                <label class="col-sm-2 add_name"><b>상품명&nbsp;&nbsp;*</b></label>
                 <div class="col-sm-3">
                     <input type="text" name="p_name" class="form-control" placeholder="상품명을 입력하세요">
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>가격</b></label>
+                <label class="col-sm-2 add_name"><b>가격&nbsp;&nbsp;*</b></label>
                 <div class="col-sm-3">
                     <input type="number" name="p_unitPrice" class="form-control" placeholder="가격을 입력하세요">
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>상세정보</b></label>
+                <label class="col-sm-2 add_name"><b>상세정보&nbsp;&nbsp;*</b></label>
                 <div class="col-sm-5">
                     <textarea name="p_description" cols="50" rows="2" class="form-control"></textarea>
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>제조사</b></label>
+                <label class="col-sm-2 add_name"><b>제조사</b></label>
                 <div class="col-sm-3">
                     <input type="text" name="p_manufacturer" class="form-control" placeholder="제조사를 입력하세요">
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>분류</b></label>
+                <label class="col-sm-2 add_name"><b>분류&nbsp;&nbsp;*</b></label>
                 <div class="col-sm-3">
                     <input type="text" name="p_category" class="form-control" placeholder="분류를 입력하세요">
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-2"><b>재고 수</b></label>
+                <label class="col-sm-2 add_name"><b>재고 수</b></label>
                 <div class="col-sm-3">
                     <input type="number" name="p_unitsInStock" class="form-control" placeholder="재고 수를 입력하세요">
                 </div>
@@ -97,7 +102,7 @@
             
             <!-- 상품 이미지 업로드 부분 -->
             <div class="form-group row">
-                <label class="col-sm-2"><b>이미지</b></label>
+                <label class="col-sm-2 add_name"><b>이미지&nbsp;&nbsp;*</b></label>
                 <div class="col-sm-3">
                     <input type="text" name="p_filename" class="form-control">
                 </div>
@@ -113,7 +118,7 @@
         </form>
     </div>
     
-    <jsp:include page="../footer.jsp" />
+    <jsp:include page="../../footer.jsp" />
     
 </body>
 </html>

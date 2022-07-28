@@ -1,0 +1,270 @@
+*{
+    /* 리스트 항목 점 없애기 */
+    list-style: none;
+    /* 텍스트 밑줄 없애기 */
+    text-decoration: none; 
+    /* 테이블 경계선 합치기 */
+    border-collapse: collapse;
+    /* 간격, 콘텐츠영역(덩치) 기본 0px */
+    margin:0;
+    padding:0;
+    /* 글자색은 검은색 */
+    color: black;
+
+    /* font-family: 'NanumSqare'; */
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+/* 2. 네비게이션 */
+.header .navbar {
+    font-family: 'GmarketSansM';
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 0 10px rgb(136, 136, 136) ;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:5;
+}
+
+/* 2-1. 로고 (왼쪽) */
+.nav_logo img {
+    padding-bottom: 8px;
+}
+
+.nav_logo a {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(41, 82, 160);
+    font-size: 22px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2-2. 메뉴 (중간) */
+.nav_menu ul li {
+    padding: 0 5px;
+}
+.nav_menu a{
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: rgb(41, 82, 160);
+}
+
+.nav_menu a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(64, 109, 190);
+    /* font-weight: bold; */
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}
+
+.nav-line {
+    color: rgb(177, 180, 187);
+    font-family: 'NanumSquareLight';
+}
+
+/* 2-3. 로그인 (오른쪽) */
+.nav_login a {
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    font-family: 'NanumSquare';
+}
+.nav_login a:hover {
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+}
+
+.nav_login img {
+    padding-right: 8px;
+}
+
+/* 3. 메인 페이지 소개글 */
+.intro_text {
+    margin-top: 300px;
+}
+
+/* 3-1. 상단 */
+.intro_text .container span {
+    font-family: 'GmarketSansM';
+    font-size: 30px;
+    color: rgb(231, 231, 231);
+}
+
+/* 3-2. 중간 (웹사이트 이름) */
+.intro_text .container h1 {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: rgb(248, 248, 248);
+    line-height: 1;
+}
+
+.intro_text .container h1 img {
+    height: 80px;
+    padding-bottom: 15px;
+    opacity: 70%;
+    transform: scaleX(-1);
+}
+
+/* 라인 */
+.intro_text .line {
+    width: 42px;
+    float: left;
+    border-bottom: 3px solid rgb(236, 236, 236);
+    margin-top: 25px;
+}
+
+/* 3-3. 하단 (웹사이트 설명) */
+.intro_text .container p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 25px;
+    color: rgb(236, 236, 236);
+    word-spacing: 0.6px;
+}
+
+/* 4. 푸터 */
+.footer {
+    background-color: white;
+    padding-top: 18px;
+    padding-bottom: 8px;
+}
+
+.footer h1 {
+    color: rgb(10, 56, 116);
+    font-family: 'NanumSquare';
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer span {
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    color: rgb(95, 130, 175);
+    text-align: center;
+    line-height: 2;
+}
+
+/* 로그인 페이지 css */
+.main_section {
+    display: flex;
+    justify-content: center;
+}
+.main_center_screen {
+    position: absolute;
+    margin-top: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 210, 249, 0.5);
+    flex-grow: 1;
+    height: auto;
+    width: 450px;
+    border-radius: 10px;
+    /* 마진 및 페딩 수치 적용순서는 top부터 시계방향(top-right-buttom-left) */
+    padding: 30px 0 20px 0; 
+}
+.main_center_screen > input, button {
+    padding: 10px;
+    margin: 20px;
+    font-size: 15px;
+}
+.account {
+    width: 80%;
+}
+
+/* 게시판 페이지 css */
+.board_main > h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.board_main {
+    width: 1000px;
+	margin:auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+}
+table td,th {
+    border-bottom:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background: rgb(80, 210, 249, 0.5);
+}
+#button_writing_create {
+    text-align: right;
+    padding: 10px 0 10px 0;
+}
+#button_writing_create > input {
+    height: 25px;
+    width: 50px;
+}
+.board_title, .board_content {
+    width: 100%;
+}
+.borad_writing_create_button {
+    display: flex;
+}
+.borad_writing_create_button > input {
+    flex:1;
+    height: 30px;
+}
+.board_writing_read_content {
+    min-height: 350px;
+    text-align: left;
+}
+#read_title {
+    text-align: left;
+}
+
+/* 지도 */
+.location_section {
+    height: 100%;
+    width: 100%;
+}
+.map_wrap {
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+.infoWindow {
+    margin: 0px;
+    padding: 3px;
+    text-align: center;
+}
+.radius_border{border:1px solid #919191;border-radius:5px;}     
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}   
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}  

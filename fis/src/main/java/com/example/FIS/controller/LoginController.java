@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.PrintWriter;
 import java.util.List;
 
 @Controller
@@ -34,9 +36,12 @@ public class LoginController {
         return "login/join";
     }
     @PostMapping("/join") // 회원가입
-    public String memberJoin(LoginDto loginDto) {
+    public void memberJoin(LoginDto loginDto, HttpServletResponse response) throws Exception{
         loginService.memberJoin(loginDto);
-        return "redirect:/login";
+        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println("<script>alert('회원 가입이 완료되었습니다.'); location.href='/login';</script>");
+        out.flush();
     }
     @PostMapping("/login")  // 로그인
     public String memberLogin(HttpServletRequest request, LoginDto loginDto, RedirectAttributes rttr) {

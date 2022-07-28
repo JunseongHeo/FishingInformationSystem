@@ -27,12 +27,12 @@
                 <!-- 2-3. 로그인 (오른쪽) -->
                 <c:if test = "${member == null}">
                     <div class="nav_login">
-                        <a class="login" href="<c:url value='/login'/>"><img src="../images/login.png">로그인</a>
+                        <a class="login" href="<c:url value='/login'/>"><img src="/images/login.png">로그인</a>
                     </div>
                 </c:if>
                 <c:if test = "${member != null}">
                     <div class="nav_login">
-                        <a href="<c:url value='/login/logout'/>" title="로그아웃"><img src="../images/logout.png">로그아웃</a>
+                        <a href="<c:url value='/login/logout'/>" title="로그아웃"><img src="/images/logout.png">로그아웃</a>
                     </div>
                 </c:if>
             </div>

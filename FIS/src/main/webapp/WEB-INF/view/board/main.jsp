@@ -9,16 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/style.css">
+
     <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
-    <title>커뮤니티</title>
+    <!-- 나눔스퀘어 폰트 연결 링크 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <!-- 부트스트랩 연동 -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css 연결 링크 -->
+    <link rel="stylesheet" href="/css/design.css" />
+    <link rel="stylesheet" href="/css/productsDesign.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+
 </head>
 <body>
     <!-- div는 division 콘텐츠 영역 나누기 class는 스타일 적용을 위한 참조라벨 -->
     <div class ="wrap"> <!--전체-->
         <jsp:include page="../topNav.jsp" /> <!-- 네비바 -->
+
+        <!-- 페이지 배너 -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>커뮤니티 게시판</h1>
+            </div>
+        </div>
+
         <section class="main_section"> <!--가운데 세션-->
             <div class="board_main">
-                <h2>커뮤니티</h2>
                 <table name="button_board_writing_create">
                     <tr>
                         <td colspan="5" id="button_writing_create">
@@ -48,5 +67,7 @@
             </div>
         </section>
     </div>
+
+    <jsp:include page="../footer.jsp" />
 </body>
 </html>

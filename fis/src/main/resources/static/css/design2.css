@@ -30,11 +30,11 @@
 
 /* 1. 메인 이미지 */
 .bg_img {
-	background-image: url(../images/main5.jpg);
+	background-image: url(../images/bg.jpg);
     height:100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 35px;
+    margin-top: 65px;
 }
 
 /* 2. 네비게이션 */
@@ -109,14 +109,14 @@
 
 /* 3. 메인 페이지 소개글 */
 .intro_text {
-    margin-top: 300px;
+    margin-top: 150px;
 }
 
 /* 3-1. 상단 */
 .intro_text .container span {
     font-family: 'GmarketSansM';
-    font-size: 30px;
-    color: rgb(231, 231, 231);
+    font-size: 25px;
+    color: rgb(51, 51, 51);
 }
 
 /* 3-2. 중간 (웹사이트 이름) */
@@ -124,7 +124,7 @@
     font-family: 'Albert Sans', sans-serif;
     font-weight: 700;
     font-size: 80px;
-    color: rgb(248, 248, 248);
+    color: rgb(54, 54, 54);
     line-height: 1;
 }
 
@@ -135,22 +135,13 @@
     transform: scaleX(-1);
 }
 
-/* 라인 */
-.intro_text .line {
-    width: 42px;
-    float: left;
-    border-bottom: 3px solid rgb(236, 236, 236);
-    margin-top: 25px;
-}
-
 /* 3-3. 하단 (웹사이트 설명) */
 .intro_text .container p {
     font-family: 'NanumSquare';
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.6;
-    margin-top: 25px;
-    color: rgb(236, 236, 236);
-    word-spacing: 0.6px;
+    margin-top: 10px;
+    color: rgba(54, 54, 54, 0.959);
 }
 
 /* 4. 푸터 */
@@ -175,7 +166,24 @@
     line-height: 2;
 }
 
+/* 페이지 배너 */
+.jumbotron {
+    background-image: url('../images/sub3.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 20px;
+}
 
+.jumbotron h1 {
+    font-family: 'NanumSquareExtraBold';
+    font-size: 60px;
+    color: rgb(19, 35, 71);
+    margin-top: 45px;
+}
 
-
+.jumbotron p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    color: rgba(0, 22, 68, 0.945);
+}
 

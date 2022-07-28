@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+* {
+    list-style: none;  
+    text-decoration: none; 
+}
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url(../font/GmarketSansTTFBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url(../font/GmarketSansTTFMedium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansL';
+	src: url(../font/GmarketSansTTFLight.woff) format('woff');
+}
+
+
+/* 페이지 배너 */
+.jumbotron {
+    background-image: url('../images/sub_login.jpg');
+    background-repeat: no-repeat;
+    height: 280px;
+    margin-top: 10px;
+}
+
+.jumbotron h1 {
+    font-family: 'NanumSquareExtraBold';
+    font-size: 60px;
+    color: rgb(10, 19, 41);
+    margin-top: 45px;
+}
+
+.jumbotron p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    color: rgba(0, 22, 68, 0.945);
+}
+
+/* 로그인 header */
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'NanumSquare';
+    /* background-color: rgba(224, 237, 252, 0.486); */
+}
+
+.main_section {
+}
+
+.main_center_screen {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 5px rgb(218, 218, 218);
+    padding: 90px 0;
+}
+
+/* 로그인 메인 */
+.box_header {
+    font-family: 'GmarketSansM';
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.main_center_screen p {
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+/* 아이디 */
+#id {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#id:hover {
+    box-shadow: 0 0 3px rgba(90, 134, 216, 0.945);
+    transition: all 0.3s;
+}
+
+#id:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+}
+
+#id::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight';
+}
+
+/* 비밀번호 */
+#password {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/pw.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#password:hover {
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: all 0.3s;
+}
+
+#password:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: 0.3s;
+}
+
+#password::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight'; 
+}
+
+/* 로그인 버튼 */
+#button_login {
+    border: none;
+    font-size: 17px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: rgba(86, 144, 219, 0.945);
+    color: white;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#button_login:hover {
+    background-color: rgba(48, 113, 233, 0.945);
+    box-shadow: 0 0 3px rgba(48, 113, 233, 0.945);
+    transition: all 0.3s;
+}
+
+
+
+/* 회원가입 / 아이디, 비밀번호 찾기 */
+#membership {
+    /* margin-bottom: 20px; */
+}
+
+#membership a {
+    font-size: 17px;
+    color: rgba(117, 117, 117, 0.945);
+}
+
+#membership span {
+    color: rgb(194, 194, 194);
+    font-size: 15px;
+    font-family: 'NanumSquareLight';
+    padding: 0 12px;
+}
+
+#membership a:hover {
+    color: rgba(74, 140, 240, 0.945);
+    text-decoration: none;
+    font-family: 'NanumSquareBold';
+    transition: 0.3s;
+}
+.warning_loginFalse {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

@@ -13,16 +13,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="https://kit.fontawesome.com/30bc34d870.js" crossorigin="anonymous"></script>
-    <title>상품 등록</title>
+
+    <!-- 나눔스퀘어 폰트 연결 링크 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <!-- 부트스트랩 연동 -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css 연결 링크 -->
+    <link rel="stylesheet" href="/css/design.css" />
+    <link rel="stylesheet" href="/css/editDesign.css" />
+
+    <title>상품 정보 수정</title>
 </head>
 <body>
     <jsp:include page="../../topNav.jsp" /> <!-- 네비바 -->
-	<jsp:include page="../menu.jsp" />
 
-	<!-- 점보트론은 대형전광판이라는 의미를 지니고 있는데, 다양한 컴포넌트(텍스트, 이미지, 회사로고 등) 포함 가능 -->
-	<div class="jumbotron">
+
+	<!-- 페이지 배너 -->
+    <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4">상품 등록</h1>
+            <h1>상품 정보 수정</h1>
         </div>
     </div>
 
@@ -115,6 +126,6 @@
 
         </form>
     </div>
-    <jsp:include page="../footer.jsp" />
+    <jsp:include page="../../footer.jsp" />
 </body>
 </html>

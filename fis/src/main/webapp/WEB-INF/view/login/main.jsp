@@ -17,7 +17,8 @@
     <!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- css 연결 링크 -->
-    <link rel="stylesheet" type="text/css" href="/css/design.css">
+    <link rel="stylesheet" href="../css/design2.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <title>로그인</title>
 </head>
 <script
@@ -25,41 +26,53 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 <body>
-    <div class ="wrap"> <!--전체-->
+    <div class ="wrap header"> <!--전체-->
+
         <jsp:include page="../topNav.jsp" /> <!-- 네비바 -->
 
-                <!-- 페이지 배너 -->
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1>로그인</h1>
-                        <p>더 다양한 서비스를 이용하시려면 회원가입 또는 로그인을 진행해주세요</p>
-                    </div>
+            <!-- 페이지 배너 -->
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>로그인</h1>
+                    <p>더 다양한 서비스를 이용하시려면 회원가입 또는 로그인을 진행해주세요</p>
                 </div>
+            </div>
 
-                <section class="main_section"> <!--가운데 세션-->
-                    <div class="container">
-                                <main class="main_center_screen col-sm-8" align="center">
+            <section class="main_section"> <!--가운데 세션-->
+                <div class="container">
+                    <main class="main_center_screen col-sm-8" align="center">
+                        <c:if test = "${result == 0}">
+                            <div class = "warning_loginFalse"> ID 또는 Password를 잘못 입력하셨습니다.</div>
+                        </c:if>
+                        <!--비로그인 상태-->
+                        <c:if test = "${member == null}">
+                            <h1 class="box_header">로그인</h1>
+                            <form id="login_form" method="post" > <!--가운데 세션-->
+                                <input id="id" type="text" placeholder="아이디" name="id" class="account col-sm-6">
+                                <br>
+                                <input id="password" type="password" placeholder="비밀번호를 입력해주세요" name="pw" class="account col-sm-6">
+                                <br>
+                            </form>
+                            <button type="submit" id="button_login" class="account col-sm-6">로그인</button>
+                             <div id="membership" class="">
+                                 <a href="<c:url value='/login/join'/>" id="membership_join">회원가입</a>
+                                 <span>ㅣ</span>
+                                 <a href="<c:url value='/login/findId'/>" id="membership_id_recover">아이디 찾기</a>
+                                 <span>ㅣ</span>
+                                 <a href="<c:url value='/login/findPw'/>" id="membership_password_recover">비밀번호 찾기</a>
+                             </div>
+                        </c:if>
+                        <!--로그인 상태-->
+                        <c:if test = "${member != null}">
+                            <h1 class="box_header">로그인 되셨습니다.</h1>
+                            <br>
+                            <h1 class="box_header">환영합니다 "${member.userName}"님!</h1>
+                        </c:if>
+                    </main>
+                </div>
+            </section>
 
-                                    <h1 class="box_header">로그인</h1>
-                                    <input type="text" placeholder="아이디" id="id" class="account col-sm-6">
-                                    <br>
-                                    <input type="password" placeholder="비밀번호" id="password" class="account col-sm-6">
-                                    <br>
-                                    <button id="button_login" id="button_login" class="account col-sm-6">로그인</button>
-
-                                    <div id="membership" class="">
-                                        <a href="../_login/login_membership_join.html" id="membership_join">회원가입</a>
-                                        <span>ㅣ</span>
-                                        <a href="../_login/login_id_recover.html" id="membership_id_recover">아이디 찾기</a>
-                                        <span>ㅣ</span>
-                                        <a href="../_login/login_password_recover.html" id="membership_password_recover">비밀번호 찾기</a>
-                                    </div>
-
-                                </main>
-                        </div>
-                </section>
-
-    </div>
+    </div> <!-- wrap header 끝-->
 
     <jsp:include page="../footer.jsp" />
     <script>

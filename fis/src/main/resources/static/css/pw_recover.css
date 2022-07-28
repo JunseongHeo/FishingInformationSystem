@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+* {
+    list-style: none;  
+    text-decoration: none; 
+}
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url(../font/GmarketSansTTFBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url(../font/GmarketSansTTFMedium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansL';
+	src: url(../font/GmarketSansTTFLight.woff) format('woff');
+}
+
+
+/* 페이지 배너 */
+.jumbotron {
+    background-image: url('../images/sub_login.jpg');
+    background-repeat: no-repeat;
+    height: 280px;
+    margin-top: 10px;
+}
+
+.jumbotron h1 {
+    font-family: 'NanumSquareExtraBold';
+    font-size: 60px;
+    color: rgb(10, 19, 41);
+    margin-top: 45px;
+}
+
+.jumbotron p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    color: rgba(0, 22, 68, 0.945);
+}
+
+/* 로그인 header */
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'NanumSquare';
+    /* background-color: rgba(224, 237, 252, 0.486); */
+}
+
+.main_section {
+}
+
+.main_center_screen {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 60px;
+    margin-bottom: 55px;
+    box-shadow: 0 0 5px rgb(218, 218, 218);
+    padding: 90px 0;
+}
+
+/* 로그인 메인 */
+.box_header {
+    font-family: 'GmarketSansM';
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.main_center_screen p {
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+/* 아이디 */
+#id {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#id:hover {
+    box-shadow: 0 0 3px rgba(90, 134, 216, 0.945);
+    transition: all 0.3s;
+}
+
+#id:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+}
+
+#id::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight';
+}
+
+/* 이름 */
+#name {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/name.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#name:hover {
+    box-shadow: 0 0 3px rgba(90, 134, 216, 0.945);
+    transition: all 0.3s;
+}
+
+#name:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+}
+
+#name::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight';
+}
+
+/* 생년월일 */
+#birth {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/birth.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#birth:hover {
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: all 0.3s;
+}
+
+#birth:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: 0.3s;
+}
+
+#birth::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight'; 
+}
+
+/* 전화번호 */
+#phone_number {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    background-image: url(../images/phone.png);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding: 6px 0 6px 36px;
+    height: auto;  
+}
+
+#phone_number:hover {
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: all 0.3s;
+}
+
+#phone_number:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(110, 160, 235, 0.945);
+    transition: 0.3s;
+}
+
+#phone_number::placeholder {
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    padding-left: 3px;    
+    font-family: 'NanumSquareLight'; 
+}
+
+
+/* 비밀번호 찾기 버튼 */
+#button_password_recover_completion {
+    border: none;
+    font-size: 17px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background-color: rgba(86, 144, 219, 0.945);
+    color: white;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#button_password_recover_completion:hover {
+    background-color: rgba(48, 113, 233, 0.945);
+    box-shadow: 0 0 3px rgba(48, 113, 233, 0.945);
+    transition: all 0.3s;
+}
+
+/* 취소 버튼 */
+.button_back {
+    border: none;
+    font-size: 17px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: rgba(201, 201, 201, 0.945);
+    color: white;
+    box-shadow: 0 0 3px rgba(202, 202, 202, 0.945);
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 auto;
+}
+
+.button_back a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.button_back:hover {
+    background-color: rgba(179, 180, 185, 0.945);
+    box-shadow: 0 0 3px rgba(202, 202, 202, 0.945);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
