@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* 페이지 배너 */
+.jumbotron {
+    background-image: url('../images/sub3.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.jumbotron h1 {
+    font-family: 'NanumSquareExtraBold';
+    font-size: 60px;
+    color: rgb(19, 35, 71);
+    margin-top: 45px;
+}
+
+.jumbotron p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    color: rgba(0, 22, 68, 0.945);
+}
+
+/* 상품 상세 보기 */
+
+.product_img {
+	
+}
+
+.product_con {
+	padding-top: 15px;
+}
+
+.product_text {
+	font-family: 'NanumSquare';
+	
+}
+
+.product_text h3 {
+	font-family: 'NanumSquareBold';
+	font-size: 28px;
+	padding-top: 10px;
+}
+
+.product_text .product_price {
+	font-family: 'NanumSquareBold';
+	font-size: 20px;
+	color: rgb(30, 59, 112);
+}
+
+
+.product_text p {
+	line-height: 1.2;
+}
+
+.product_text b {
+	font-size: 16px;
+	color: rgb(66, 66, 66);
+}
+
+.product_text .text_text {
+	color: rgb(66, 66, 66);
+	font-size: 16px;
+}
+
+.product_text .product_con {
+	line-height: 1.6;
+	font-size: 17px;
+	padding: 15px 15px;
+	border-radius: 5px;
+	border: 1px solid rgb(221, 221, 221);
+}
+
+/* 버튼 */
+.product_button1 {
+	background-color: rgb(171, 178, 187);
+	margin-right: 5px;
+	font-family: 'NanumSquareBold';
+	color: white;
+}
+
+.product_button1:hover {
+	background-color: rgb(116, 171, 243);
+	color: white;
+}
+
+.product_button2 {
+	background-color: rgb(129, 140, 155);
+	margin-right: 5px;
+	font-family: 'NanumSquareBold';
+	color: white;
+}
+
+.product_button2:hover {
+	background-color: rgb(68, 129, 219);
+	color: white;
+}
+
+.product_button3 {
+	background-color: rgb(73, 83, 97);
+	font-family: 'NanumSquareBold';
+	color: white;
+}
+
+.product_button3:hover {
+	background-color: rgb(26, 87, 180);
+	color: white;
+}
+
+
+
+
+

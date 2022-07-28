@@ -33,5 +33,6 @@
         </form>
         </section>
     </div>
+    <jsp:include page="../footer.jsp" /> <!-- 푸터 -->
 </body>
 </html>

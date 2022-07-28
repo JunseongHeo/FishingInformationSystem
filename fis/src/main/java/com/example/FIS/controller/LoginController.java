@@ -107,6 +107,10 @@ public class LoginController {
         }
         return "login/findPw";
     }
+    @GetMapping("/deliveryInfo")
+    public String moveDeliveryInfo() {
+        return "login/deliveryInfo";
+    }
     @PostMapping("/deliveryInfo") // 배송 현황 조회
     public String findDeliveryInfo(Model model, String p_user) {
         List<DeliveryDto> currentInfo = loginService.deliveryInfo(p_user);

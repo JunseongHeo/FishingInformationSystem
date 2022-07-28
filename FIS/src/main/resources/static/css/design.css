@@ -1,0 +1,344 @@
+@charset "UTF-8";
+
+* {
+    list-style: none;  
+    text-decoration: none; 
+}
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url('../font/GmarketSansTTFBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url('../font/GmarketSansTTFMedium.woff') format('woff');
+}
+
+@font-face {
+	 font-family: 'GmarketSansL';
+	 src: url('../font/GmarketSansTTFLight.woff') format('woff');
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+
+/* 1. 메인 이미지 */
+.bg_img {
+	background-image: url('../images/main5.jpg');
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 65px;
+}
+
+/* 2. 네비게이션 */
+.header .navbar {
+    font-family: 'GmarketSansM';
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 0 10px rgb(136, 136, 136) ;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:5;
+}
+
+/* 2-1. 로고 (왼쪽) */
+.nav_logo img {
+    padding-bottom: 8px;
+}
+
+.nav_logo a {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(41, 82, 160);
+    font-size: 22px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2-2. 메뉴 (중간) */
+.nav_menu ul li {
+    padding: 0 5px;
+}
+.nav_menu a{
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: rgb(41, 82, 160);
+}
+
+.nav_menu a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(64, 109, 190);
+    /* font-weight: bold; */
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}
+
+.nav-line {
+    color: rgb(177, 180, 187);
+    font-family: 'NanumSquareLight';
+}
+
+/* 2-3. 로그인 (오른쪽) */
+.nav_login a {
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    font-family: 'NanumSquare';
+}
+.nav_login a:hover {
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+}
+
+.nav_login img {
+    padding-right: 8px;
+}
+
+/* 3. 메인 페이지 소개글 */
+.intro_text {
+    margin-top: 150px;
+}
+
+/* 3-1. 상단 */
+.intro_text .container span {
+    font-family: 'GmarketSansM';
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+/* 3-2. 중간 (웹사이트 이름) */
+.intro_text .container h1 {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+}
+
+.intro_text .container h1 img {
+    height: 80px;
+    padding-bottom: 15px;
+    opacity: 70%;
+    transform: scaleX(-1);
+}
+
+/* 3-3. 하단 (웹사이트 설명) */
+.intro_text .container p {
+    font-family: 'NanumSquare';
+    font-size: 19px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.959);
+}
+
+/* 4. 푸터 */
+.footer {
+    background-color: white;
+    padding-top: 18px;
+    padding-bottom: 8px;
+}
+
+.footer h1 {
+    color: rgb(10, 56, 116);
+    font-family: 'NanumSquare';
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer span {
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    color: rgb(95, 130, 175);
+    text-align: center;
+    line-height: 2;
+}
+
+
+
+
+@charset "UTF-8";
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url(../_font/GmarketSansTTFBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url(../_font/GmarketSansTTFMedium.woff) format('woff');
+}
+
+@font-face {
+	 font-family: 'GmarketSansL';
+	 src: url(../_font/GmarketSansTTFLight.woff) format('woff');
+}
+
+
+/* 페이지 배너 */
+.jumbotron {
+    background-image: url('../images/sub3.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.jumbotron h1 {
+    font-family: 'NanumSquareExtraBold';
+    font-size: 60px;
+    color: rgb(19, 35, 71);
+    margin-top: 45px;
+}
+
+.jumbotron p {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    color: rgba(0, 22, 68, 0.945);
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'NanumSquare';
+}
+
+.main_section {
+
+}
+
+.main_center_screen {
+    padding: 50px 0;
+    border-radius: 50px;
+    border: 1px solid rgba(233, 233, 233, 0.664);
+    box-shadow: 0 0 8px rgba(231, 231, 231, 0.651);
+    margin-top: 150px;
+}
+
+/* 로그인 메인 */
+.box_header {
+    font-family: 'NanumSquareBold';
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.main_center_screen p {
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+/* 아이디 */
+.id {
+    text-align: left;
+    padding-left: 8px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#id {
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#id:focus {
+    outline: none;
+
+}
+
+#id::placeholder {
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+}
+
+/* 비밀번호 */
+.password {
+    text-align: left;
+    padding-left: 8px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#password {
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+#password:focus {
+    outline: none;
+
+}
+
+#password::placeholder {
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+}
+
+/* 로그인 버튼 */
+#button_login {
+    border: none;
+    font-size: 18px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    background-color: rgba(82, 149, 248, 0.945);
+    color: white;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    cursor: pointer;
+}
+#button_login
+
+/* 회원가입 / 아이디, 비밀번호 찾기 */
+#membership {
+    margin-bottom: 20px;
+}
+
+#membership a {
+    font-size: 17px;
+    color: rgba(117, 117, 117, 0.945);
+}
+
+#membership span {
+    color: rgb(196, 196, 196);
+    font-size: 15px;
+    font-family: 'NanumSquareLight';
+}
+
+#membership a:hover {
+    color: rgba(59, 126, 226, 0.945);
+    text-decoration: none;
+    font-family: 'NanumSquareBold';
+}
+
+
+
+

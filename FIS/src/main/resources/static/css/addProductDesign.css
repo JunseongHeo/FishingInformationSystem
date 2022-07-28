@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.add_con {
+    
+}
+
+.add_name {
+	font-family: 'NanumSquareBold';
+	font-size: 18px;
+}
+
+.add_text::placeholder {
+	font-family: 'NanumSquare';
+	font-size: 16px;
+}
+
+.add_back {
+	font-family: 'NanumSquare';
+}
+
+.add_back input {
+	padding: 7px 18px;
+	font-size: 19px;
+ 	background-color: rgb(182, 182, 182);
+	border-radius: 8px;
+	color: white;
+	
+}
+
+.add_back input:hover {
+ 	background-color: rgb(153, 153, 153);
+ 	padding: 7px 18px;
+ 	font-size: 19px;
+ 	border-radius: 8px;
+}
+
+.add_add {
+	font-family: 'NanumSquareBold';
+	float: right;
+}
+
+.add_add input {
+	padding: 7px 18px;
+	font-size: 19px;
+ 	background-color: rgb(65, 114, 204);
+	border-radius: 8px;
+	color: white;
+
+}
+
+.add_add input:hover {
+ 	background-color: rgb(35, 83, 173);
+ 	padding: 7px 18px;
+ 	font-size: 19px;
+ 	border-radius: 8px;
+}
+
+
+
