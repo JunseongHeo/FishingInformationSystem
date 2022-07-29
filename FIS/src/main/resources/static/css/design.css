@@ -176,6 +176,57 @@
 }
 
 
+/* 게시판 페이지 css */
+.board_main > h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.board_main {
+    width: 1000px;
+	margin:auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+}
+table td,th {
+    border-bottom:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background: rgb(80, 210, 249, 0.5);
+}
+#button_writing_create {
+    text-align: right;
+    padding: 10px 0 10px 0;
+}
+#button_writing_create > input {
+    height: 25px;
+    width: 50px;
+}
+.board_title, .board_content {
+    width: 100%;
+}
+.borad_writing_create_button {
+    display: flex;
+}
+.borad_writing_create_button > input {
+    flex:1;
+    height: 30px;
+}
+.board_writing_read_content {
+    min-height: 350px;
+    text-align: left;
+}
+#read_title {
+    text-align: left;
+}
+
+
 
 
 

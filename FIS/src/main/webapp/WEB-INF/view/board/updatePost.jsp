@@ -18,7 +18,9 @@
     <!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- css 연결 링크 -->
-    <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+            <link rel="stylesheet" href="/css/design.css" />
+                <link rel="stylesheet" href="/css/productsDesign.css" />
 
     <title>커뮤니티</title>
 </head>
@@ -27,6 +29,12 @@
     <div class ="wrap"> <!--전체-->
         <jsp:include page="../topNav.jsp" /> <!-- 네비바 -->
 
+ <!-- 페이지 배너 -->
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1>커뮤니티 게시판</h1>
+                    </div>
+                </div>
 
         <section class="main_section"> <!--가운데 세션-->
             <div class="board_main">
@@ -55,6 +63,5 @@
         </section>
     </div>
 
-        <jsp:include page="../footer.jsp" />
 </body>
 </html>

@@ -72,6 +72,10 @@
 }
 
 /* 버튼 */
+.button_design {
+    display: inline-block;
+}
+
 .product_button1 {
 	background-color: rgb(171, 178, 187);
 	margin-right: 5px;

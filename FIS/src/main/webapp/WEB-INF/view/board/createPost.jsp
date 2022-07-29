@@ -20,6 +20,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!-- css 연결 링크 -->
         <link rel="stylesheet" href="/css/style.css" />
+            <link rel="stylesheet" href="/css/design.css" />
+                <link rel="stylesheet" href="/css/productsDesign.css" />
 
 </head>
 <body>
@@ -34,8 +36,8 @@
                     </div>
                 </div>
 
-        <section class="main_section"> <!--가운데 세션-->
-                <div class="board_main">
+        <section class="main_section" > <!--가운데 세션-->
+                <div class="board_main" >
                     <h2>게시글 작성</h2>
                     <form method="post" action="/board/createPost">
                         <input type="hidden" value="${member.id}" name="userId">
@@ -54,7 +56,7 @@
                                 <td><textarea cols="80" rows="25" name="contents" class="board_content"></textarea></td>
                             </tr>
                         </table>
-                        <div class="borad_writing_create_button">
+                        <div class="borad_writing_create_button" style="margin-bottom=150px">
                             <input class="btn" type="submit" value="등록">
                             <input class="btn" type="button" value="취소" onclick=' location.href="${path}/board" '>
                         </div>
@@ -63,6 +65,5 @@
             </section>
     </div>
 
-        <jsp:include page="../footer.jsp" />
 </body>
 </html>

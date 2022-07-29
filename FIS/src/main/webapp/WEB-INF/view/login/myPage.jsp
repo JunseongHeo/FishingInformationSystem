@@ -20,7 +20,7 @@
     <!-- css 연결 링크 -->
     <link rel="stylesheet" href="/css/design.css" />
     <link rel="stylesheet" href="/css/join.css" />
-    <link rel="stylesheet" href="../css/productsDesign.css" />
+    <link rel="stylesheet" href="/css/productsDesign.css" />
 
     <title>마이 페이지</title>
 </head>

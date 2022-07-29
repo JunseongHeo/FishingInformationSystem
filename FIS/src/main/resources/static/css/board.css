@@ -1,0 +1,35 @@
+
+.board_main {
+    font-family: 'NanumSquare';
+    color: rgb(29, 29, 29);
+    font-size: 18px;
+}
+
+.top {
+    font-family: 'NanumSquareBold';
+    font-size: 18px;
+	background-color: rgb(10, 56, 116);
+    color: white;
+}
+
+#button_writing_create {
+    float:right;
+    width:100%;
+}
+
+.top_button {
+	background-color: rgb(10, 56, 116);
+	margin-right: 5px;
+	font-family: 'NanumSquareBold';
+	color: white;
+/*    padding: 8px 12px;*/
+	border:none;
+	border-radius:5px;
+	font-size:14px;
+    text-align:center;
+}
+
+.top_button:hover {
+    background-color: rgb(19, 67, 129);
+	color: white;
+}

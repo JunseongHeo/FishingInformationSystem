@@ -13,6 +13,23 @@
 
     /* font-family: 'NanumSqare'; */
 }
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url(../font/GmarketSansTTFBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url(../font/GmarketSansTTFMedium.woff) format('woff');
+}
+
+@font-face {
+	 font-family: 'GmarketSansL';
+	 src: url(../font/GmarketSansTTFLight.woff) format('woff');
+}
+
 html, body {
     height: 100%;
     width: 100%;

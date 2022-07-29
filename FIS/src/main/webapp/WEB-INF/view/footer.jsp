@@ -5,6 +5,7 @@
     <!-- 4. 푸터 -->
     <div class="footer">
         <div class="container">
+            <hr/>
             <h1>
                 ⓒ 2022.08.01. &nbsp;Legend Of JAVA(EZEN). &nbsp;All rights reserved.
                 &nbsp; &nbsp;ㅣ &nbsp; &nbsp;

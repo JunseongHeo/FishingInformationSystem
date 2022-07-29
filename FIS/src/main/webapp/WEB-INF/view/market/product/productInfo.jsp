@@ -64,7 +64,7 @@
 					<p><b>재고 수 : <fmt:formatNumber value="${productInfo.p_unitsInStock}" pattern="#,###"/></b></p>
 					<p class="product_price"><fmt:formatNumber value="${productInfo.p_unitPrice}" pattern="#,###"/>원</p>
 
-					<p>
+					<p class="button_design">
 						<!-- 상품 주문을 클릭하면 자바스크립트의 핸들러 함수 addToCart()호출되도록 만들었다. -->
 						<!-- 장바구니 버튼을 추가하였다.클릭하면 /cart.jsp로 이동하게 만들어 주었다. -->
 						<a href="<c:url value='/market/product/${productInfo.p_id}/delivery'/>" class="btn btn-info">상품 주문 >></a>

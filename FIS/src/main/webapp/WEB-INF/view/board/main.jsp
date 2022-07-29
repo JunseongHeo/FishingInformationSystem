@@ -18,9 +18,10 @@
     <!-- 구글 폰트 (로고에 사용 : font-family: 'Albert Sans', sans-serif;) 연결 링크 -->
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- css 연결 링크 -->
+        <link rel="stylesheet" href="/css/board.css" />
     <link rel="stylesheet" href="/css/design.css" />
     <link rel="stylesheet" href="/css/productsDesign.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+
 
 
 </head>
@@ -39,12 +40,10 @@
         <section class="main_section"> <!--가운데 세션-->
             <div class="board_main">
                 <table name="button_board_writing_create">
-                    <tr>
-                        <td colspan="5" id="button_writing_create">
-                            <input type="button" value="글작성" onclick=' location.href="${path}/board/createPost" '>
-                        </td>
-                    </tr>
-                    <tr>
+                    <div id="button_writing_create">
+                        <input type="button" value="글작성" onclick=' location.href="${path}/board/createPost" ' class="top_button">
+                    </div>
+                    <tr class="top">
                         <th>글번호</th>
                         <th>글제목</th>
                         <th>작성자</th>
@@ -54,8 +53,8 @@
                     <c:forEach items="${list}" var="listUp">
                     <tr>
                         <td>${listUp.bno}</td>
-                        <td>
-                            <a href="${path}/board/getPost/${listUp.bno}">
+                        <td class="subject">
+                            <a href="${path}/board/getPost/${listUp.bno}" style="color= rgb(29, 29, 29);">
                             ${listUp.title}</a>
                         </td>
                         <td>${listUp.userName}</td>
