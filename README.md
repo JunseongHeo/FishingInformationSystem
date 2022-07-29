@@ -8,7 +8,9 @@
 7월 4일(월) ~ 7월 28일(목), 4주 동안 진행
 
 ### :blush: 참여자 
-조진원, 주재영, 이건효, 이정연, 허준성
+![팀원소개](https://github.com/JunseongHeo/FishingInformationSystem/blob/main/fis/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/%EC%BA%A1%EC%B3%90/%ED%8C%80%EC%9B%90%EC%86%8C%EA%B0%9C.png?raw=true)
+
+
 
 ### :hammer: 기술스택
 ![기술스택](https://github.com/JunseongHeo/FishingInformationSystem/blob/main/FIS/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/%EC%BA%A1%EC%B3%90/%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D.png?raw=true)
