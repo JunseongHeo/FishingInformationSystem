@@ -1,0 +1,127 @@
+*{
+    /* 리스트 항목 점 없애기 */
+    list-style: none;
+    /* 텍스트 밑줄 없애기 */
+    text-decoration: none;
+    /* 테이블 경계선 합치기 */
+    border-collapse: collapse;
+    /* 간격, 콘텐츠영역(덩치) 기본 0px */
+    margin:0;
+    padding:0;
+    /* 글자색은 검은색 */
+    color: black;
+
+    /* font-family: 'NanumSqare'; */
+}
+
+/* 지마켓 산스 폰트 연결 */
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url(../font/GmarketSansTTFBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url(../font/GmarketSansTTFMedium.woff) format('woff');
+}
+
+@font-face {
+	 font-family: 'GmarketSansL';
+	 src: url(../font/GmarketSansTTFLight.woff) format('woff');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+/* 2. 네비게이션 */
+.header .navbar {
+    font-family: 'GmarketSansM';
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 0 10px rgb(136, 136, 136) ;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:5;
+}
+
+/* 2-1. 로고 (왼쪽) */
+.nav_logo img {
+    padding-bottom: 8px;
+}
+
+.nav_logo a {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(41, 82, 160);
+    font-size: 22px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2-2. 메뉴 (중간) */
+.nav_menu ul li {
+    padding: 0 5px;
+}
+.nav_menu a{
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: rgb(41, 82, 160);
+}
+
+.nav_menu a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(64, 109, 190);
+    /* font-weight: bold; */
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}
+
+.nav-line {
+    color: rgb(177, 180, 187);
+    font-family: 'NanumSquareLight';
+}
+
+/* 2-3. 로그인 (오른쪽) */
+.nav_login a {
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    font-family: 'NanumSquare';
+}
+.nav_login a:hover {
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+}
+
+.nav_login img {
+    padding-right: 8px;
+}
+
+
+
+/* 지도 */
+
+.map_wrap {
+    height:100%;
+    width:100%;
+    padding-top: 65px;
+}
+.infoWindow {
+    margin: 0px;
+    padding: 3px;
+    text-align: center;
+    width: 300px;
+}
