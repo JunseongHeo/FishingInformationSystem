@@ -1,9 +1,0 @@
-		<c:forEach var="dto" items="${ list }">
-			<tr>
-				<th>${ dto.board_idx }</th>
-				<th>${ dto.board_name }</th>
-				<th>${ dto.board_title }</th>
-				<th>${ dto.board_date }</th>
-				<th>${ dto.board_hit }</th>
-			</tr>		
-		</c:forEach>
